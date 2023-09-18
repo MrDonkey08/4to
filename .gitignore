@@ -1,0 +1,121 @@
+# Obsidian
+*.obsidian*
+*.trash
+borrador-portada.md
+
+# Office Docs
+*.doc 
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.csv 
+*.pdf*
+*.kdbx
+
+#Temporary Office Docs
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+#Backup Office Docs
+Backup of *.doc*
+*.xlk
+*.~vsd*
+
+*.jar
+*.class
+*.pyc
+*.pyd
+*.whl
+
+# Proteus
+*.workspace
+
+#Boole Deusto
+*.sco.txt
+
+# WinCpl
+*.abs
+*.lst
+*.pla
+*.sim
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+*.app
+.snapshots/*
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+*.ko
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+*.tmp
+
+# Shared objects (inc. Windows DLLs)
+*.so.*
+*.dylib
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf

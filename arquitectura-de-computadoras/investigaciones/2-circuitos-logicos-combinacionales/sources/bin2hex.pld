@@ -1,0 +1,32 @@
+Name     BIN2HEX ;
+PartNo   00 ;
+Date     11/09/2023 ;
+Revision 01 ;
+Designer Engineer ;
+Company  University of Tulsa ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+/* *************** INPUT PINS *********************/
+PIN 2    = A                        ; /*                                 */ 
+PIN 3    = B                        ; /*                                 */ 
+PIN 4    = C                        ; /*                                 */ 
+PIN 5    = D                        ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN 20    = a                        ; /*                                 */ 
+PIN 19    = b                        ; /*                                 */ 
+PIN 18    = c                        ; /*                                 */ 
+PIN 17    = d                        ; /*                                 */ 
+PIN 16    = e                        ; /*                                 */ 
+PIN 15    = f                        ; /*                                 */ 
+PIN 14    = g                        ; /*                                 */ 
+
+a = ((!B) & (!D)) # ((!A) & C) # ((!A) & B & D) # (B & C) # (A & (!D)) # (A & (!B) & (!C));
+b = (A & (!C) & D) # ((!B) & (!D)) # ((!A) & (!C) & (!D)) # ((!A) & C & D) # ((!A) & (!B));
+c = ((!C) & D) # ((!A) & B) # (A & (!B)) # ((!A) & (!C)) # ((!A) & D);
+d = (B & (!C) & D) # ((!B) & C & D) # (B & C & (!D)) # (A & (!C)) # ((!A) & (!B) & (!D));
+e = ((!B) & (!D)) # (C & (!D)) # (A & C) # (A & B);
+f = ((!C) & (!D)) # (B & (!D)) # ((!A) & B & (!C)) # (A & (!B)) # (A & C);
+g = ((!B) & C) # (A & (!B)) # (A & D) # (C & (!D)) # ((!A) & B & (!C));
