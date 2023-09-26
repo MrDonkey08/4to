@@ -1,0 +1,107 @@
+:root {
+    --azuloscuro: #0C356A;
+    --azul: #279EFF;
+    --mint: #40F8FF;
+    --claro: #D5FFD0;
+    --negro: black;
+    --blanco: white;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1, h2, h3 {
+    text-align: center;
+	color: var(--azuloscuro)
+}
+
+.head-1 {
+    font-size: 3.5rem;
+    color: var(--azuloscuro);
+}
+
+.head-1 span {
+    font-size: 1.75 rem;
+    color: var(--mint);
+}
+
+.nav-fondo {
+    background-color: var(--negro);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 17%;
+    background-color: var(--negro);
+}
+
+.menu a {
+    font-size: 1.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: bold;
+    color: var(--blanco);
+    width: 15rem;
+    text-align: center;
+    padding: 0.75rem 0
+}
+
+.menu a:hover {
+    background-color: var(--claro);
+    color: var(--negro);
+}
+
+.head-2 {
+	font-size: 2.75 rem;
+	color: var(--azuloscuro);
+}
+
+.color-fondo {
+	background-color: rgba(0, 0, 0, 0.757);
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	align-items: center;
+}
+
+.fondo-ubicacion {
+	background-image: url(../img/fondo.webp);
+	background-size: cover;
+	height: 20rem;
+	background-position-y: center;
+}
+
+.ubicacion p {
+	display: inline;
+	font-size: 1.25rem;
+}
+
+
+
+.boton {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.75;
+	background-color: var(--negro);
+	color: var(--blanco);
+	padding: 0.75rem 1.75rem;
+	margin: 2.3rem;
+	border-radius: 1.75rem;
+}
+
+.boton:hover {
+	background-color: var(--claro);
+	color: var(--negro)
+}

@@ -1,0 +1,17 @@
+#FF-N {
+	padding: 25px 20px;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+#FF-E {
+	font-family: Georgia, 'Times New Roman', Times, serif ;
+	color: firebrick;
+	text-align: center;
+}
+
+#FF-G {
+	color: blueviolet;
+	size: 50px;
+	text-align: right;
+}
