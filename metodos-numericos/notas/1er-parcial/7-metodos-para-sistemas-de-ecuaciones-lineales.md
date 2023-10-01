@@ -24,6 +24,7 @@ x_1 &=& \cfrac{11 - 2x_2 - x_3}{4} \\
 x_2 &=& \cfrac{3+x_1}{2} \\
 x_3 &=& \cfrac{16 - 2x_1 - x_2}{4}
 \end{eqnarray}$$
+
 ### Método de Jacobi
 
 En este método se evalua las ecuaciones encontradas con el vector inicial y en cada iteración se remplazan las incógnitas por los valores previamente encontrados
@@ -42,7 +43,8 @@ En este método se evalua las ecuaciones encontradas con el vector inicial y en 
 
 > [!SUCCESS] Respuesta
 > 
->$$(x_1, x_2, x_3) \approx (1.00153, 1.99976, 3.00134)$$
+> $$(x_1, x_2, x_3) \approx (1.00153, 1.99976, 3.00134)$$
+
 ### Método de Gauss-Seidel
 
 En este método, a diferencia del de Jacobi, se remplaza los valores encontrados en la misma iteración, es decir, al encontrar $x_n$ se remplaza en las siguientes ecuaciones.
