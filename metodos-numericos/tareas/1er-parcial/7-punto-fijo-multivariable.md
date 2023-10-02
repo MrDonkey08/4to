@@ -1,15 +1,15 @@
 # Tarea 7 - Métodos de Punto Fijo Multivariable
 
 > **Nombre:** Alan Yahir Juárez Rubio 
-> **Fecha de elaboración:** 30/09/2023
+> **Fecha de elaboración:** 01/10/2023
 > **Fecha límite de entrega:** 01/10/2023
 
 ## Ejercicio 1
 
 Con los siguientes arreglos $x = \cfrac{24 - xy - 4z}{7}$ $y = \cfrac{12 - x^2 + 3yz}{29}$ y $z = \cfrac{43 + 3xy - yz}{13}$, utilizando el Método de Punto fijo Multivariable efectué dos iteraciones con el esquema de Gauss (simultáneas) para aproximar la solución del sistema de ecuaciones utilizando los valores iniciales $(x_0, y_0, z_0) = (4, 7, 3)$
 
-1. $(x_2, y_2, z_2) = (-0.56644, 1.94972, 0.95849)$
-2. ==$(x_2, y_2, z_2) = (0.56644, 1.94972, 0.95849)$== 
+1. ==$(x_2, y_2, z_2) = (-0.56644, 1.94972, 0.95849)$==
+2. $(x_2, y_2, z_2) = (0.56644, 1.94972, 0.95849)$
 3. $(x_2, y_2, z_2) = (0.56644, -1.94972, 0.95849)$
 4. $(x_2, y_2, z_2) = (0.56644, 1.94972, -0.95849)$
 
@@ -57,14 +57,17 @@ Utilice los despejes
 $$\begin{array}{l}
 x = \cfrac{1 + 3xy - 2z^2}{2}, && y = \cfrac{2 - x - 2yz}{7},  && z = \cfrac{3 - 3x - xy}{8}
 \end{array}$$
-
+Realizar 4 iteraciones
 ### Procedimiento
 
 |  n  |  $x_i$  |  $y_i$   |  $z_1$  |
 |:---:|:-------:|:--------:|:-------:|
 |  1  |    1    | -0.14286 | -0.125  |
 |  2  | 0.27009 | 0.13776  | 0.01786 |
+|  3  | 0.55549 | 0.24643  | 0.26907 |
+|  4  | 0.63294 | 0.18741  | 0.14958 |
+
 
 > [!SUCCESS] Resultado
 > 
-> $$(x_2, y_2, z_2) = (0.27009, 0.13776, 0.01786)$$
+> $$(x_4, y_4, z_4) = (0.63294, 0.18741, 0.14958 |)$$
