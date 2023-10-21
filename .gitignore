@@ -3,6 +3,9 @@
 *.trash
 borrador-portada.md
 
+#Diagrams (draw.io)
+*.drawio.bkp
+
 # Office Docs
 *.doc 
 *.docx
