@@ -4,27 +4,21 @@
 > 
 > **$x$-distante:** Se le dice $x$ - distante cuando todos los $x_i$ tengan la misma diferencia con su sucesor y su antecesor.
 
-> [!IMPORTANT]
-> 
-> Método utilizado para valores en $x$ que no son $x$ -distantes, es decir, que no todas las $x_i - x_{i-1}$ valgan lo mismo; en caso de ser $x$ -distantes, utilizar **diferencias finitas**
-
 ## Diferencias Divididas
 
 > [!IMPORTANT]
 > 
 > Método utilizado para valores en $x$ que no son $x$ -distantes
 
-
-| $x_i$ | $f(x_i)$ |                       Primeras                       |                              Segundas                               |                                      Terceras                                      |
-|:-----:|:--------:|:----------------------------------------------------:|:-------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|
-| $x_0$ | $f(x_0)$ |                                                      |                                                                     |                                                                                    |
-|       |          | $$f[x_0 - x_1] = \cfrac{f(x_1) - f(x_0)}{x_1 - x_0}$$ |                                                                     |                                                                                    |
-| $x_1$ | $f(x_1)$ |                                                      | $$f[x_0 - x_1 - x_2] = \cfrac{f[x_1 - x_2] - f[x_0 - x_1]}{x_2 - x_0}$$ |                                                                                    |
-|       |          | $$f[x_1 - x_2] = \cfrac{f(x_2) - f(x_1)}{x_2 - x_1}$$ |                                                                     | $$f[x_0 - x_1 - x_2 - x_3] = \cfrac{f[x_1 - x_2 - x_3] - f[x_0 - x_1 - x_2]}{x_3 - x_0}$$ |
-| $x_2$ | $f(x_2)$ |                                                      | $$f[x_1 - x_2 - x_3] = \cfrac{f[x_2 - x_3] - f[x_1 - x_2]}{x_3 - x_1}$$ |                                                                                    |
-|       |          | $$f[x_2 - x_3] = \cfrac{f(x_3) - f(x_2)}{x_3 - x_2}$$ |                                                                     |                                                                                    |
-| $x_3$ | $f(x_3)$ |                                                      |                                                                     |                                                                                    |
-
+| $x_i$ | $f(x_i)$ |                       Primeras                        |                                Segundas                                 |                                         Terceras                                          |
+|:-----:|:--------:|:-----------------------------------------------------:|:-----------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------:|
+| $x_0$ | $f(x_0)$ |                                                       |                                                                         |                                                                                           |
+|       |          | $$f[x_0 - x_1] = \cfrac{f(x_1) - f(x_0)}{x_1 - x_0}$$ |                                                                         |                                                                                           |
+| $x_1$ | $f(x_1)$ |                                                       | $$f[x_0 - x_1 - x_2] = \cfrac{f[x_1 - x_2] - f[x_0 - x_1]}{x_2 - x_0}$$ |                                                                                           |
+|       |          | $$f[x_1 - x_2] = \cfrac{f(x_2) - f(x_1)}{x_2 - x_1}$$ |                                                                         | $$f[x_0 - x_1 - x_2 - x_3] = \cfrac{f[x_1 - x_2 - x_3] - f[x_0 - x_1 - x_2]}{x_3 - x_0}$$ |
+| $x_2$ | $f(x_2)$ |                                                       | $$f[x_1 - x_2 - x_3] = \cfrac{f[x_2 - x_3] - f[x_1 - x_2]}{x_3 - x_1}$$ |                                                                                           |
+|       |          | $$f[x_2 - x_3] = \cfrac{f(x_3) - f(x_2)}{x_3 - x_2}$$ |                                                                         |                                                                                           |
+| $x_3$ | $f(x_3)$ |                                                       |                                                                         |                                                                                           |
 
 ### Polinomios de Newton
 
@@ -35,24 +29,23 @@ P_3(x) &= f(x_0) + (x - x_0) f[x_0, x_1] + (x - x_0)(x - x_1)f[x_0, x_1, x_2] + 
 P_n(x) &= \sum^n_{k=0} a_k \prod_{i=0}^{k-1} (x - x_i) \tag{Grado n}
 \end{alignat}$$
 
-
 ### Ejemplo 
 
 Calcule la tabla de diferencias con los siguientes puntos:
 
 | $x_i$ | $f(x_i)$ |     |     |     |     |     |
-|:-----:|:-------:|:---:|:---:|:---:|:---:|:---:|
-|  -2   |   -18   |     |     |     |     |     |
-|       |         | 13  |     |     |     |     |
-|  -1   |   -5    |     | -5  |     |     |     |
-|       |         |  3  |     |  1  |     |     |
-|   0   |   -2    |     | -1  |     |  0  |     |
-|       |         |  0  |     |  1  |     |  0  |
-|   2   |   -2    |     |  3  |     |  0  |     |
-|       |         |  9  |     |  1  |     |     |
-|   3   |    7    |     |  9  |     |     |     |
-|       |         | 45  |     |     |     |     |
-|   6   |   142   |     |     |     |     |     |
+|:-----:|:--------:|:---:|:---:|:---:|:---:|:---:|
+|  -2   |   -18    |     |     |     |     |     |
+|       |          | 13  |     |     |     |     |
+|  -1   |    -5    |     | -5  |     |     |     |
+|       |          |  3  |     |  1  |     |     |
+|   0   |    -2    |     | -1  |     |  0  |     |
+|       |          |  0  |     |  1  |     |  0  |
+|   2   |    -2    |     |  3  |     |  0  |     |
+|       |          |  9  |     |  1  |     |     |
+|   3   |    7     |     |  9  |     |     |     |
+|       |          | 45  |     |     |     |     |
+|   6   |   142    |     |     |     |     |     |
 
 luego interpole el valor de $f(x_i)$ para $x_i = 2.2$ con un polinomio de grado 1, grado 2 hacia atrás y grado 2 hacia adelante
 
