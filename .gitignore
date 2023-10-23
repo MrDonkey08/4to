@@ -3,7 +3,7 @@
 *.trash
 borrador-portada.md
 
-#Diagrams (draw.io)
+# Diagrams (draw.io)
 *.drawio.bkp
 
 # Office Docs
@@ -17,12 +17,12 @@ borrador-portada.md
 *.pdf*
 *.kdbx
 
-#Temporary Office Docs
+# Temporary Office Docs
 ~$*.doc*
 ~$*.xls*
 ~$*.ppt*
 
-#Backup Office Docs
+# Backup Office Docs
 Backup of *.doc*
 *.xlk
 *.~vsd*
@@ -36,7 +36,7 @@ Backup of *.doc*
 # Proteus
 *.workspace
 
-#Boole Deusto
+# Boole Deusto
 *.sco.txt
 
 # WinCpl
@@ -57,6 +57,10 @@ Backup of *.doc*
 .history/
 *.app
 .snapshots/*
+
+# CodeBlocks
+*.depend
+*.layout
 
 # Prerequisites
 *.d
