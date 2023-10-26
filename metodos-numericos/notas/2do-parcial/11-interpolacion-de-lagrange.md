@@ -2,28 +2,25 @@
 
 El **polinomio interpolador** de Lagrange tiene la forma 
 
-$$\prod_{\substack {j=0 \\ i \neq j}}^n \cfrac{x-x_j}{x_i-x_j}$$
-
-$$y_0 = \sum_{i=1}^n y_i \prod_{j=1}^{\substack{n \\ j \neq i}} \cfrac{x_0 - x_j}{x_i - x_j}$$
+$$\begin{array}{c}
+\prod \limits_{\substack {j=0 \\ i \neq j}}^n \cfrac{x-x_j}{x_i-x_j} 
+& \text{o} &
+y_0 = \sum \limits_{i=1}^n y_i \prod \limits_{j=1}^{\substack{n \\ j \neq i}} \cfrac{x_0 - x_j}{x_i - x_j}
+\end{array}$$
 
 ## Polinomios
 
-
-$$\begin{alignat}{2}
+$$\begin{alignat}{4}
 y_0 &= y_1 \cfrac{x_0 - x_2}{x_1 - x_2} 
-	+ y_2 \cfrac{x_0 - x_1}{x_2 - x_1} \tag{Grado 1} \\
-y_0 &= \cfrac{x_0 - x_2}{x_1 - x_2} \cfrac{x_0 - x_3}{x_1 - x_3} 
-	+ y_2 \cfrac{x_0 - x_1}{x_2 - x_1} \cfrac{x_0 - x_3}{x_2 - x_3}  
-	+ y_3 \cfrac{x_0 - x_1}{x_3 - x_1} \cfrac{x_0 - x_2}{x_3 - x_2} \tag{Grado 2} \\ 
-y_0 &= y_1 \cfrac{x_0 - x_2}{x_1 - x_2}\cfrac{x_0 - x_3}{x_1 - x_3} \cfrac{x_0 - x_4}{x_1 - x_4} 
-	+ y_2 \cfrac{x_0 - x_1}{x_2 - x_1} \cfrac{x_0 - x_3}{x_2 - x_3} \cfrac{x_0 - x_4}{x_2 - x_4} 
-	+ y_3 \cfrac{x_0 - x_1}{x_3 - x_1} \cfrac{x_0 - x_2}{x_3 - x_2} \cfrac{x_0 - x_4}{x_3 - x_4}  
-	+ y_4  \cfrac{x_0 - x_1}{x_4 - x_1} \cfrac{x_0 - x_2}{x_4 - x_2} \cfrac{x_0 - x_3}{x_4 - x_3} \tag{Grado 3}
+	&+& y_2 \cfrac{x_0 - x_1}{x_2 - x_1} \tag{Grado 1} \\
+y_0 &= y_1 \cfrac{x_0 - x_2}{x_1 - x_2} \cfrac{x_0 - x_3}{x_1 - x_3} 
+	&+& y_2 \cfrac{x_0 - x_1}{x_2 - x_1} \cfrac{x_0 - x_3}{x_2 - x_3}  
+	&+& y_3 \cfrac{x_0 - x_1}{x_3 - x_1} \cfrac{x_0 - x_2}{x_3 - x_2} \tag{Grado 2} \\ 
+y_0 &= y_1 \cfrac{x_0 - x_2}{x_1 - x_2} \cfrac{x_0 - x_3}{x_1 - x_3} \cfrac{x_0 - x_4}{x_1 - x_4} 
+	&+& y_2 \cfrac{x_0 - x_1}{x_2 - x_1} \cfrac{x_0 - x_3}{x_2 - x_3} \cfrac{x_0 - x_4}{x_2 - x_4} 
+	&+& y_3 \cfrac{x_0 - x_1}{x_3 - x_1} \cfrac{x_0 - x_2}{x_3 - x_2} \cfrac{x_0 - x_4}{x_3 - x_4}  
+	&+& y_4 \cfrac{x_0 - x_1}{x_4 - x_1} \cfrac{x_0 - x_2}{x_4 - x_2} \cfrac{x_0 - x_3}{x_4 - x_3} \tag{Grado 3}
 \end{alignat}$$
-
-$$\begin{matrix}
-\\
-\end{matrix}$$
 
 ## Ejemplo
 
@@ -36,6 +33,7 @@ Se requiere conocer la densidad del agua a 43.7 °C con un polinomio de grado 1,
 > [!NOTE]
 > 
 > El **polinomio interpolador** se obtiene sustituyendo todos los puntos cercanos al "desconocido" excepto $x_0$
+
 ### Grado 1
 
 $$\begin{alignat}{2}
