@@ -1,0 +1,32 @@
+h1 {
+	text-align: center;
+	color: #C36A2D
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+#titulo {
+	color: #E2C275;
+	font-size: 18px;
+}
+
+#main-menu {
+	display: flex;
+	justify-content: space-around;
+	background-color: #8d5336;
+	color: white;
+}
+
+#main-menu a{
+	color: white;
+}
+
+#main-menu a:hover{
+	color: #E2C275;
+}
+
+#contacto {
+	
+}
