@@ -89,7 +89,7 @@ h1, h2, h3, a {
 }
 
 .fondo-ubicacion {
-	background-image: url(../img/fondo.jpg);
+	background-image: url(../img/fondo.jpg), url(https://www.xtrafondos.com/wallpapers/programacion-computadora-y-lentes-10837.jpg);
 	background-size: cover;
 	height: auto;
 	background-position-y: center;
