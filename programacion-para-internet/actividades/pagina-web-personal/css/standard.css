@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+* {	/* Global styles (all elements) */
+	font-family: 'Outfit', sans-serif;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.1rem;
+	background-color: #e8e5f0;
+}
+
+h1 {
+	color: #DC3535
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+p {
+	text-align: justify;
+}
+
+button {
+	text-transform: uppercase;
+	border-radius: 1.75rem;
+	color: white;
+	margin: 20px;
+	height: 40px;
+	padding: 0 35px;
+	background-color: #5B0888;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+}
+
+button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.50);
+
+}
+
+fieldset {
+	padding: 50px 50px;
+	color: white;
+	border: #11437c solid 2px;
+	background-color: #3d60aa;
+}
+
+legend {
+	text-align: right;
+	background-color: black;
+	color: white;
+	font-weight: 300;
+	padding: 0.75rem 1.5rem;
+	text-transform: uppercase;
+}
+
+#titulo {
+	color: #F49D1A;
+	font-size: 18px;
+}
+
+.bloque {
+	color: #181616;
+	margin: 40px 15%;
+	border: #11337c solid 2px;
+	padding: 20px 40px 30px;
+	background-color: #979dd8;
+}
+
+.bloque .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	padding: 25px;
+	background-color: #11337c;
+}
+
+.tarjeta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	padding: 25px;
+	background-color: #11337c;
+
+}
+
+.fila {
+	display: grid;
+}
+
+.columna-2{
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.columna-3{
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.campos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	gap: 0.75rem;
+	column-gap: 1.5rem;
+}
+
+.campos-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 0.75rem;
+	column-gap: 1.5rem;
+}
+
+.campo {
+	display: flex;
+	flex-direction: column;
+	margin: 5px 0;
+}
+
+.campo label, .campo select {
+	margin-bottom: 8px;
+}
+
+.campo input, .campo select {
+	padding: 12px;
+}
+
+fieldset button {
+	margin: 20px 0 15px;
+	float: right;
+}

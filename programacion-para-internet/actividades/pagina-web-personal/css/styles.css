@@ -1,61 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
-
-*{ /* Global styles (all elements) */
-	font-family: 'Outfit', sans-serif;
-}
-
-html {	
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-body {
-	font-size: 1.1rem;
-	background-color: #e8e5f0;
-}
-
-h1 {
-	color: #DC3535
-}
-
 h2 {
 	color: #0a2368;
 }
 
 h3 {
 	color: #11337c;
-}
-
-h1, h2, h3 {
-	text-align: center;
-}
-
-p {
-	text-align: justify;
-}
-
-button {
-	text-transform: uppercase;
-	border-radius: 1.75rem;
-	color: white;
-	margin: 20px;
-	height: 40px;
-	padding: 0 35px;
-	background-color: #5B0888;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.50);
-}
-
-button:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.50);
-
-}
-
-#titulo {
-	color: #F49D1A;
-	font-size: 18px;
 }
 
 #main-menu {
@@ -96,7 +44,7 @@ button:hover {
 
 #fondo {
 	color: white;
-	background-image: url(https://www.xtrafondos.com/wallpapers/programacion-computadora-y-lentes-10837.jpg), url(../img/lentes.jpg);
+	background-image: url(../img/lentes.jpg), url(https://www.xtrafondos.com/wallpapers/programacion-computadora-y-lentes-10837.jpg);
 	background-size: cover;
 	height: auto;
 	background-position-y: center;
@@ -109,71 +57,17 @@ button:hover {
 	justify-content: center;
 }
 
-#servicios-tarjeta {
-	color: #181616;
-	margin: 40px 15%;
-	border: #11337c solid 2px;
-	padding: 20px 40px 30px;
-	background-color: #979dd8;
-}
-
 #servicios {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
 }
 
-#servicios-tarjeta .icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
-	padding: 25px;
-	background-color: #11337c;
-}
-
-.fila {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1.5rem;
-}
-
-.campo {
-	display: flex;
-	flex-direction: column;
-	margin: 5px 0;
-}
-
-.campo label {
-	margin-bottom: 8px;
-}
-
-.campo input {
-	padding: 12px;
-}
-
 #mensaje-input {
 	height: 150px;
 }
 
-#campos button {
+.campos button {
 	margin: 20px 0 15px;
 	float: right;
-}
-
-fieldset {
-	padding: 50px 50px;
-	color: white;
-	border: #11437c solid 2px;
-	background-color: #3d60aa;
-}
-
-legend {
-	background-color: black;
-	color: white;
-	font-weight: 300;
-	padding: 0.75rem 1.5rem;
-	text-transform: uppercase;
 }
