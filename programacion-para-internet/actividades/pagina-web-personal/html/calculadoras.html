@@ -145,14 +145,14 @@
 				<div class="campos">
 					<div class="campo" id="peso">
 						<label for="peso">Peso:</label>
-						<input type="text" id="peso" placeholder="Peso" />
+						<input type="number" id="input-peso" placeholder="kg" />
 					</div>
 					<div class="campo" id="altura">
 						<label for="altura">Altura:</label>
-						<input type="text" id="altura" placeholder="Altura" />
+						<input type="number" id="input-altura" placeholder="cm" />
 					</div>
 				</div>
-				<button>calcular</button>
+				<button id="btn-imc">calcular</button>
 			</fieldset>
 
 			<h3>Datos de Salida</h3>
@@ -161,11 +161,11 @@
 				<div class="campos">
 					<div class="campo" id="imc">
 						<label for="imc">IMC:</label>
-						<input type="text" id="imc" placeholder="IMC" />
+						<input disabled type="number" id="input-imc" placeholder="IMC" />
 					</div>
 					<div class="campo" id="composicion-corporal">
 						<label for="composicion-corporal">Composicion corporal:</label>
-						<input type="text" id="composicion-corporal" placeholder="Composicion Corporal" />
+						<input disabled type="text" id="input-composicion-corporal" placeholder="Composicion Corporal" />
 					</div>
 				</div>
 			</fieldset>
@@ -179,7 +179,7 @@
 				<div class="campos-2">
 					<div class="campo" id="temperatura">
 						<label for="temperatura">Temperatura:</label>
-						<input type="text" id="temperatura" placeholder="Temperatura" />
+						<input type="text" id="input-temperatura" placeholder="Temperatura" />
 					</div>
 					<div class="campo" id="temperatura-1">
 						<label for="temperatura-1">Entrada</label>
