@@ -8,6 +8,7 @@ const unidadTemp = document.getElementById("unidad-temp");
 - Cuando encuentra un número, se detendrá en cuanto detecte una letra
 - Cuando no encuentra un número devuelve 'NaN' (Not a Number)
 - Acepta notación científica (p. ej.'1.23e-4' = 0.000123) 
+- Descarta los ceros finales redundantes (p.ej: 12.4300000 -> 12.43)
 */
 
 let temp;
@@ -21,7 +22,7 @@ function getTemp() {
 	const optTempOut = document.getElementById("opt-temp-out").value;
 
 	if (optTempIn === optTempOut) {
-		alert("Error: entrada y salida deben ser diferentes");
+		temp = inputTemp;
 	} else {
 		switch (optTempIn) {
 			case "C":
@@ -42,7 +43,7 @@ function getTemp() {
 
 			case "K":
 				if (optTempOut === "C") {
-					temp = inputTemp = 273.5;
+					temp = inputTemp - 273.15;
 				} else {
 					temp = ((inputTemp - 273.15) * 9) / 5 + 32; // K->F
 				}
@@ -52,10 +53,10 @@ function getTemp() {
 
 	temp = parseFloat(temp.toFixed(5));
 
-	if (optTempIn === "K") {
-		symbol = "";
+	if (optTempOut == "K") {
+		symbol = " ";
 	}
-	resTemp.innerHTML = temp + symbol + optTempOut ;
+	resTemp.innerHTML = temp + symbol + optTempOut;
 }
 
 btnTemp.addEventListener("click", getTemp);
