@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
 
-* {	/* Global styles (all elements) */
+* {
+	/* Global styles (all elements) */
 	font-family: 'Outfit', sans-serif;
 }
 
@@ -21,7 +22,12 @@ h1 {
 	color: #DC3535
 }
 
-h1, h2, h3 {
+h1 span {
+	color: #F49D1A;
+	font-size: 18px;
+}
+
+h1, h2, h3, button, output {
 	text-align: center;
 }
 
@@ -29,12 +35,12 @@ p {
 	text-align: justify;
 }
 
-button {
+button, .res {
 	text-transform: uppercase;
 	border-radius: 1.75rem;
 	color: white;
-	margin: 20px;
-	height: 40px;
+	margin-top: 20px;
+	height: 45px;
 	padding: 0 35px;
 	background-color: #5B0888;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
@@ -52,6 +58,10 @@ fieldset {
 	background-color: #3d60aa;
 }
 
+fieldset button {
+	float: right;
+}
+
 legend {
 	text-align: right;
 	background-color: black;
@@ -59,11 +69,6 @@ legend {
 	font-weight: 300;
 	padding: 0.75rem 1.5rem;
 	text-transform: uppercase;
-}
-
-#titulo {
-	color: #F49D1A;
-	font-size: 18px;
 }
 
 .bloque {
@@ -94,25 +99,23 @@ legend {
 	height: 150px;
 	padding: 25px;
 	background-color: #11337c;
-
 }
 
 .fila {
 	display: grid;
 }
 
-.columna-2{
+.columna-2 {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.columna-3{
+.columna-3 {
 	grid-template-columns: repeat(3, 1fr);
 }
 
 .campos {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto;
 	gap: 0.75rem;
 	column-gap: 1.5rem;
 }
@@ -120,7 +123,6 @@ legend {
 .campos-2 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto auto auto;
 	gap: 0.75rem;
 	column-gap: 1.5rem;
 }
@@ -131,7 +133,7 @@ legend {
 	margin: 5px 0;
 }
 
-.campo label, .campo select {
+.campo label {
 	margin-bottom: 8px;
 }
 
@@ -139,7 +141,14 @@ legend {
 	padding: 12px;
 }
 
-fieldset button {
-	margin: 20px 0 15px;
-	float: right;
+.res {
+	font-size: 20px;
+	background-color: #001C30;
+	height: 55px;
+}
+
+.res-contenedor, .res {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
