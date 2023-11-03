@@ -17,6 +17,7 @@ function getIMC() {
 	const peso = inputPeso.value;
 
 	IMC = peso / altura ** 2;
+	IMC = parseFloat(IMC.toFixed(5));
 
 	/*
 	+ Notación de potencia: a^n
