@@ -13,7 +13,7 @@ Los métodos considerados se desarrollan tomando una función simple $Q_n(x)$ qu
 $$\begin{align}
 	\int^a_b f(x) dx &= \cfrac{\Delta x}{2} [f_0 + f_1], &n = 1 \tag{Trapecio}\\
 	\int^a_b f(x) dx &= \cfrac{\Delta x}{3} [f_0 + 4f_1 + f_2], &n = 2 \tag{Simpson 1/3}\\
-	\int^a_b f(x) dx &= \cfrac{\Delta x}{8} [f_0 + 3f_1 + 3f_2 + f_3], &n = 3 \tag{Simpson 3/8}\\
+	\int^a_b f(x) dx &= \cfrac{3\Delta x}{8} [f_0 + 3f_1 + 3f_2 + f_3], &n = 3 \tag{Simpson 3/8}\\
 \end{align}$$
 
 ### Compuestas
@@ -25,7 +25,7 @@ $$\begin{align}
 $$\begin{align}
 	\int^a_b f(x) dx &= \cfrac{h}{2} [f_0 + 2f_1 + 2f_2 + 2f_3 + \cdots + f_n], &n = 1\tag{Trapecio}\\
 	\int^a_b f(x) dx &= \cfrac{h}{3} [f_0 + 4f_1 + 2f_2 + 4f_3 + \cdots + f_n], &n = 2\tag{Simpson 1/3}\\
-	\int^a_b f(x) dx &= \cfrac{h}{8} [f_0 + 3f_1 + 3f_2 + 2f_3 + \cdots + f_n], &n = 3\tag{Simpson 3/8}\\
+	\int^a_b f(x) dx &= \cfrac{3h}{8} [f_0 + 3f_1 + 3f_2 + 2f_3 + \cdots + f_n], &n = 3\tag{Simpson 3/8}\\
 \end{align}$$
 
 ## Ejemplo 1
@@ -43,7 +43,7 @@ compare el resultado con el **valor exacto**.
 
 ### Valor exacto
 
-$$\int^4_1 e^x dx = e \bigg |^1_4 = e⁴ - e¹ \approx 51.87987 $$
+$$\int^4_1 e^x dx = e \bigg |^4_1 = e⁴ - e¹ \approx 51.87987 $$
 
 ### R.T $n = 1$
 
