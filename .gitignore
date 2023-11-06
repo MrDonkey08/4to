@@ -3,6 +3,15 @@
 *.trash
 borrador-portada.md
 
+# Comprimibles
+*.zip
+*.zipx
+*.rar
+*.tar
+*.iso
+*.7z
+*.gz
+
 # Diagrams (draw.io)
 *.drawio.bkp
 
