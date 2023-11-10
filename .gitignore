@@ -68,6 +68,9 @@ Backup of *.doc*
 .snapshots/*
 
 # CodeBlocks
+bin/
+obj/
+output/
 *.depend
 *.layout
 
