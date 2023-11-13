@@ -82,3 +82,44 @@ $$\begin{alignat}{2}
 	P_n(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) + \cfrac{s(s - 1)(s - 2)}{3!} \Delta^3 f(x_0) + \cdots + \cfrac{s(s - 1)(s - 2) \cdots (s - (n - 1))}{n!} \Delta^n f(x_0) \tag{Grado n} 
 \end{alignat}$$
 
+### Ejemplos
+
+Interpolar el valor de la presión de vapor de agua a 30 °C con los siguientes datos
+
+| Presion | Temperatura |
+|:-------:|:-----------:|
+| 17.535  |     20      |
+|         |             |
+| 55.324  |     40      |
+|         |             |
+| 149.380 |     60      |
+|         |             |
+| 335.110 |     80      |
+
+#### Polinomio de grado 1
+
+$$\begin{align}
+	a_0 &= 17.535\\
+	a_1 &= \cfrac{50.324 - 17.535}{20} \approx 1.8895 \\
+	y &= 17.535 + 1.8895(x-20) \tag{Polinomio interpolador}
+\end{align}$$
+
+$$\begin{align}
+	a_0 &= 17.535\\
+	a_1 &= \approx 1.8895 \\
+	a_2 &= \cfrac{149.380 - 2(55.324) + 17.535}{2(20)²} = 0.0703\\
+	y &= 17.535 + 1.8895(x-20) + 0.0703(x-20)(x-40) \tag{Polinomio interpolador}
+\end{align}$$
+
+$$\begin{align}
+	a_0 &= 17.535\\
+	a_1 &= \approx 1.8895 \\
+	a_2 &= 0.0703\\
+	a_3 &= \cfrac{149.380 - 17.535}{20} = 6.5923\\
+	y &= 17.535 + 1.8895(x-20) + 0.0703(x-20)(x-40) + 0.0012(x-20)(x-40)(x-60) \tag{Polinomio interpolador}\\
+	y(30) &= 33
+\end{align}$$
+
+$$y(30) = 36.43$$
+
+<!-- #### Polinomio de grado 2 -->
