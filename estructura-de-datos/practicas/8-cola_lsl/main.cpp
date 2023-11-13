@@ -1,6 +1,6 @@
 #include <cstdio>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <sstream>
 
 // Para limpiar pantalla en diferentes SO's
@@ -17,11 +17,14 @@ using namespace std;
 void menu();
 void escribir(string);
 void lectura(string);
+int ranNum(float, float);
 void limpiarPantalla();
 void opcInvalida();
-
+	
 int main() {
 	setlocale(LC_CTYPE, "Spanish");
+
+	cout << ranNum(1, 3) << endl;
 
 	menu();
 
@@ -47,7 +50,7 @@ void menu() {
 				escribir("numeros_suerte1.txt");
 				break;
 			case 2:
-				//abrirArchivo("numeros_suerte2.txt");
+				// abrirArchivo("numeros_suerte2.txt");
 				break;
 			case 3:
 				cout << "Has salido del programa. ¡Vuelve pronto!\n";
@@ -63,18 +66,17 @@ void menu() {
 void escribir(string file) {
 	ofstream archivo;
 
-	//file = "archivo/" + file;
-	
+	// file = "archivo/" + file;
+
 	archivo.open("archivos/" + file, ios::out);
 
 	if (!archivo) {
 		cerr << "No se pudo abrir el archivo\n";
 		exit(1);
 	}
-
 }
 
-void leer(string file){
+void leer(string file) {
 	ifstream archivo;
 
 	archivo.open("archivos/" + file, ios::in);
@@ -84,8 +86,7 @@ void leer(string file){
 		exit(1);
 	}
 
-	while(!archivo.eof()){ // eof = end of file -> Devuelve True si es el final del archivo 
-
+	while (!archivo.eof()) { // eof = end of file -> Devuelve True si es el final
 	}
 }
 
@@ -100,5 +101,7 @@ void limpiarPantalla() {
 	system("clear"); // Para sistemas basados en Unix/Linux
 #endif
 }
+
+int randNum(int min, int max) { return rand() % (max - min + 1) + min; }
 
 void opcInvalida() { cout << "Opción inválida. Inténtelo de nuevo."; }
