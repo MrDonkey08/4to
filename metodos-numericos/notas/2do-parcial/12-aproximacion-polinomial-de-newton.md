@@ -8,7 +8,7 @@
 
 > [!IMPORTANT]
 > 
-> Método utilizado para valores en $x$ que no son $x$ -distantes
+> Método utilizado para valores en $x$ que no son $x$ -distantes. También sirven para valores $x$ distantes
 
 | $x_i$ | $f(x_i)$ |                      Primeras                       |                               Segundas                                |                                        Terceras                                         |
 |:-----:|:--------:|:---------------------------------------------------:|:---------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
@@ -23,10 +23,10 @@
 ### Polinomios de Newton
 
 $$\begin{alignat}{2}
-P_1(x) &= f(x_0) + (x - x_0) f[x_0, x_1] \tag{Grado 1} \\
-P_2(x) &= f(x_0) + (x - x_0) f[x_0, x_1] + (x - x_0)(x - x_1)f[x_0, x_1, x_2] \tag{Grado 2} \\
-P_3(x) &= f(x_0) + (x - x_0) f[x_0, x_1] + (x - x_0)(x - x_1)f[x_0, x_1, x_2] + (x - x_0)(x - x_1)(x - x_2)f[x_0, x_1, x_2, x_3] \tag{Grado 3} \\
-P_n(x) &= \sum^n_{k=0} a_k \prod_{i=0}^{k-1} (x - x_i) \tag{Grado n}
+	P_1(x) &= f(x_0) + (x - x_0) f[x_0, x_1] \tag{Grado 1} \\
+	P_2(x) &= f(x_0) + (x - x_0) f[x_0, x_1] + (x - x_0)(x - x_1)f[x_0, x_1, x_2] \tag{Grado 2} \\
+	P_3(x) &= f(x_0) + (x - x_0) f[x_0, x_1] + (x - x_0)(x - x_1)f[x_0, x_1, x_2] + (x - x_0)(x - x_1)(x - x_2)f[x_0, x_1, x_2, x_3] \tag{Grado 3} \\
+	P_n(x) &= \sum^n_{k=0} a_k \prod_{i=0}^{k-1} (x - x_i) \tag{Grado n}
 \end{alignat}$$
 
 ### Ejemplo 
@@ -50,9 +50,9 @@ Calcule la tabla de diferencias con los siguientes puntos:
 luego interpole el valor de $f(x_i)$ para $x_i = 2.2$ con un polinomio de grado 1, grado 2 hacia atrás y grado 2 hacia adelante
 
 $$\begin{alignat}{2}
-P_1(2.2) &= -2 + (2.2 - 2)(9) = 0.2 \tag{Grado 1} \\
-P_2(2.2) &= -2 + (2.2 - 0) (0) + (2.2 - 0)(2.2 - 2)(3) = 0.68 \tag{Grado 2 <-} \\
-P_3(2.2) &= -2 + (2.2 - 2)(9) + (2.2 - 2)(2.2 - 3)(9) =  1.64 \tag{Grado 2 ->} \\
+	P_1(2.2) &= -2 + (2.2 - 2)(9) = 0.2 \tag{Grado 1} \\
+	P_2(2.2) &= -2 + (2.2 - 0) (0) + (2.2 - 0)(2.2 - 2)(3) = 0.68 \tag{Grado 2 <-} \\
+	P_3(2.2) &= -2 + (2.2 - 2)(9) + (2.2 - 2)(2.2 - 3)(9) =  1.64 \tag{Grado 2 ->} \\
 \end{alignat}$$
 
 ## Diferencias Finitas
@@ -76,8 +76,9 @@ P_3(2.2) &= -2 + (2.2 - 2)(9) + (2.2 - 2)(2.2 - 3)(9) =  1.64 \tag{Grado 2 ->} \
 Sea $s = \cfrac{x - x_0}{h}$, entonces:
 
 $$\begin{alignat}{2}
-P_1(x) &= f(x_0) + s \Delta f(x_0)  \tag{Grado 1} \\
-P_2(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) \tag{Grado 2} \\
-P_3(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) + \cfrac{s(s - 1)(s - 2)}{3!} \Delta^3 f(x_0) \tag{Grado 3} \\
-P_n(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) + \cfrac{s(s - 1)(s - 2)}{3!} \Delta^3 f(x_0) + \cdots + \cfrac{s(s - 1)(s - 2) \cdots (s - (n - 1))}{n!} \Delta^n f(x_0) \tag{Grado n} 
+	P_1(x) &= f(x_0) + s \Delta f(x_0)  \tag{Grado 1} \\
+	P_2(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) \tag{Grado 2} \\
+	P_3(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) + \cfrac{s(s - 1)(s - 2)}{3!} \Delta^3 f(x_0) \tag{Grado 3} \\
+	P_n(x) &= f(x_0) + s \Delta f(x_0) + \cfrac{s(s-1)}{2!} \Delta^2 f(x_0) + \cfrac{s(s - 1)(s - 2)}{3!} \Delta^3 f(x_0) + \cdots + \cfrac{s(s - 1)(s - 2) \cdots (s - (n - 1))}{n!} \Delta^n f(x_0) \tag{Grado n} 
 \end{alignat}$$
+
