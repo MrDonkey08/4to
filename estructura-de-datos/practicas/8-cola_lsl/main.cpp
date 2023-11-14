@@ -22,11 +22,14 @@ void menu();
 void escribir(string, int);
 void lectura(string);
 int ranNum(int, int);
-void ranNums(int, int, int);
+
 void limpiarPantalla();
+void pausarPantalla();
+
 void opcInvalida();
 
 int main() {
+	limpiarPantalla();
 	setlocale(LC_CTYPE, "Spanish");
 
 	menu();
@@ -62,6 +65,7 @@ void menu() {
 				cin >> numGenerar;
 
 				if (numGenerar > 0) {
+					pausarPantalla();
 					limpiarPantalla();
 
 					cout << "Los números de la suerte son:\n\n";
@@ -89,6 +93,7 @@ void menu() {
 				opcInvalida();
 				break;
 		}
+		pausarPantalla();
 		limpiarPantalla();
 	}
 }
@@ -122,16 +127,18 @@ void leer(string file) {
 	}
 }
 
-void limpiarPantalla() {
+void pausarPantalla(){
 	cout << "\n\nPresiona <enter> para continuar.";
 	cin.ignore();
 	cin.get();
+}
 
-#ifdef _WIN32
-	system("cls"); // Para Windows
-#else
-	system("clear"); // Para sistemas basados en Unix/Linux
-#endif
+void limpiarPantalla() {
+	#ifdef _WIN32
+		system("cls"); // Para Windows
+	#else
+		system("clear"); // Para sistemas basados en Unix/Linux
+	#endif
 }
 
 int ranNum(int minimo, int maximo) {
