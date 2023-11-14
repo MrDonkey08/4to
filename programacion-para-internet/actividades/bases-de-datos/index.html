@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulario</title>
+		<link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="head-1">Plantilla de formulario</h1>
+			<img src="./img/favicon.png" alt="Recipiente" />
+		</header>
+
+		<form action="./php/registar.php" method="post" class="contenedor">
+			<fieldset>
+				<h2 class="head-2">Datos de entrada</h2>
+				<div class="contenedor-2">
+					<div class="datos">
+						<div class="dato">
+							<label for="">Nombre:</label>
+							<input placeholder="Nombre" class="input-data" name="" id="nombre" />
+						</div>
+						<div class="dato">
+							<label for="">Apellidos:</label>
+							<input placeholder="Apellidos" class="input-data" name="" id="apellidos" />
+						</div>
+						<div class="dato">
+							<label for="">Correo electrónico:</label>
+							<input placeholder="Correo electrónico" class="input-data" name="" id="email" />
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<div class="contenedor-boton">
+				<input name="btncalcular" class="boton" type="submit" value="Calcular" />
+			</div>
+		</form>
+	</body>
+</html>
