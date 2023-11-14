@@ -20,11 +20,21 @@ template <class T> T ColaGenerica<T>::quitar() {
 	delete a;
 	return aux;
 }
-
+	
 template <class T> T ColaGenerica<T>::frenteCola() const {
 	if (colaVacia())
 		throw "Cola vacía";
 	return frente->elemento;
+}
+
+template <class T> void ColaGenerica<T>::borrarCola() {
+	while (frente != nullptr) {
+		NodoCola *a;
+		a = frente;
+		frente = frente->siguiente;
+		delete a;
+	}
+	final = nullptr;
 }
 
 template <class T> bool ColaGenerica<T>::colaVacia() const {
