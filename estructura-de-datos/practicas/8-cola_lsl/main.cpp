@@ -1,10 +1,10 @@
+#include <bits/stdc++.h>
 #include <cstdio>
+#include <ctime>
 #include <fstream>
 #include <iostream>
-#include <sstream>
-#include <bits/stdc++.h>
 #include <random>
-#include <ctime>
+#include <sstream>
 
 // Para limpiar pantalla en diferentes SO's
 #ifdef _WIN32
@@ -14,24 +14,20 @@
 #endif
 
 #include "include/ColaGenerica.h"
+#include "src/ColaGenerica.cpp"
 
 using namespace std;
 
 void menu();
-void escribir(string);
+void escribir(string, int);
 void lectura(string);
 int ranNum(int, int);
+void ranNums(int, int, int);
 void limpiarPantalla();
 void opcInvalida();
 
 int main() {
 	setlocale(LC_CTYPE, "Spanish");
-
-	int num = ranNum(1, 3);
-
-    cout << num << endl;
-
-    //cout << num << endl << endl;
 
 	menu();
 
@@ -39,7 +35,9 @@ int main() {
 }
 
 void menu() {
-	short int opc;
+	short int opc = 0;
+	int minimo = 0, maximo = 0, numGenerar = 0, aux = 0;
+	ColaGenerica<int> suerte;
 
 	while (opc != 3) {
 
@@ -54,7 +52,26 @@ void menu() {
 
 		switch (opc) {
 			case 1:
-				escribir("numeros_suerte1.txt");
+				cout << "Dígita el valor mínimo: ";
+				cin >> minimo;
+
+				cout << "\nDigita el valor máximo: ";
+				cin >> maximo;
+				
+				cout << "\nDigita la cantidad de números a generar: ";
+				cin >> numGenerar;
+
+				if (numGenerar > 0) {
+					for (int i = 0; i < numGenerar; i++) {
+						aux = ranNum(minimo, maximo);
+
+						suerte.insertar(aux);
+						escribir("numeros_suerte2.txt", aux);
+					}
+				} else {
+					cout << "Error: solo se aceptan cantidades positivas.";
+				}
+
 				break;
 			case 2:
 				// abrirArchivo("numeros_suerte2.txt");
@@ -70,17 +87,19 @@ void menu() {
 	}
 }
 
-void escribir(string file) {
+void escribir(string file, int num) {
 	ofstream archivo;
 
 	// file = "archivo/" + file;
 
-	archivo.open("archivos/" + file, ios::out);
+	archivo.open("archivos/" + file, ios::app);
 
 	if (!archivo) {
 		cerr << "No se pudo abrir el archivo\n";
 		exit(1);
 	}
+
+	archivo << num << endl;
 }
 
 void leer(string file) {
@@ -110,7 +129,7 @@ void limpiarPantalla() {
 }
 
 int ranNum(int minimo, int maximo) {
-   return rand() % (maximo - minimo + 1) + minimo;
+	return rand() % (maximo - minimo + 1) + minimo;
 }
 
 void opcInvalida() { cout << "Opción inválida. Inténtelo de nuevo."; }
