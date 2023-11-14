@@ -62,8 +62,14 @@ void menu() {
 				cin >> numGenerar;
 
 				if (numGenerar > 0) {
+					limpiarPantalla();
+
+					cout << "Los números de la suerte son:\n\n";
+
 					for (int i = 0; i < numGenerar; i++) {
 						aux = ranNum(minimo, maximo);
+
+						cout << i+1 << ". " << aux << endl;
 
 						suerte.insertar(aux);
 						escribir("numeros_suerte2.txt", aux);
