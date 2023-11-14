@@ -2,6 +2,9 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <bits/stdc++.h>
+#include <random>
+#include <ctime>
 
 // Para limpiar pantalla en diferentes SO's
 #ifdef _WIN32
@@ -17,14 +20,18 @@ using namespace std;
 void menu();
 void escribir(string);
 void lectura(string);
-int ranNum(float, float);
+int ranNum(int, int);
 void limpiarPantalla();
 void opcInvalida();
-	
+
 int main() {
 	setlocale(LC_CTYPE, "Spanish");
 
-	cout << ranNum(1, 3) << endl;
+	int num = ranNum(1, 3);
+
+    cout << num << endl;
+
+    //cout << num << endl << endl;
 
 	menu();
 
@@ -102,6 +109,8 @@ void limpiarPantalla() {
 #endif
 }
 
-int randNum(int min, int max) { return rand() % (max - min + 1) + min; }
+int ranNum(int minimo, int maximo) {
+   return rand() % (maximo - minimo + 1) + minimo;
+}
 
 void opcInvalida() { cout << "Opción inválida. Inténtelo de nuevo."; }
