@@ -25,9 +25,9 @@ using namespace std;
 
 void menu();
 void escribir(string);
-void lectura(string);
+ifstream leer(string);
 
-void numsSuerte();
+void numsSuerte(int);
 template <class T> void mostrarCola(ColaGenerica<T> &q);
 
 void limpiarPantalla();
@@ -58,9 +58,9 @@ void menu() {
 		cout << endl;
 
 		switch (opc) {
-			case 1: numsSuerte(); break;
+			case 1: 
 			case 2:
-				// abrirArchivo("numeros_suerte2.txt");
+				numsSuerte(opc); 
 				break;
 			case 3:
 				cout << "Has salido del programa. ¡Vuelve pronto!\n";
@@ -99,7 +99,7 @@ void escribir(string file, int num) {
 }
 
 
-void leer(string file) {
+ifstream leer(string file) {
 	ifstream archivo;
 
 	archivo.open("archivos/" + file, ios::in);
@@ -109,8 +109,7 @@ void leer(string file) {
 		exit(1);
 	}
 
-	while (!archivo.eof()) { // eof = end of file -> Devuelve True si es el final
-	}
+	return archivo;
 }
 
 void pausarPantalla(){
@@ -127,15 +126,23 @@ void limpiarPantalla() {
 	#endif
 }
 
-void numsSuerte() {
-	int n, n1, n2;
+void numsSuerte(int origen) {
+	int n, n1, n2, numero;
 	ColaGenerica<int> q;
 	randomize;
 	// número inicial de elementos de la lista
 	n = 11 + random(N);
-	// se generan n números aleatorios
-	for (int i = 1; i <= n; i++) {
-		q.insertar(random(N * 3));
+
+	if(origen == 1){ 
+		for (int i = 1; i <= n; i++) {
+			q.insertar(random(N * 3));
+		}
+	} else {
+		ifstream archivo = leer("numeros_suerte2.txt");
+
+		while (archivo >> numero) {
+			q.insertar(numero);
+		}
 	}
 
 	// se genera aleatoriamente el intervalo n1
