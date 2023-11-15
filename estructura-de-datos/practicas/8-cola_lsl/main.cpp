@@ -16,16 +16,22 @@
 #include "include/ColaGenerica.h"
 #include "src/ColaGenerica.cpp"
 
+
+const int N = 99;
+#define randomize (srand(time(NULL)))
+#define random(num) (rand() % (num))
+
 using namespace std;
 
 void menu();
-void escribir(string, int);
+void escribir(string);
 void lectura(string);
-int ranNum(int, int);
+
+void numsSuerte();
+template <class T> void mostrarCola(ColaGenerica<T> &q);
 
 void limpiarPantalla();
 void pausarPantalla();
-
 void opcInvalida();
 
 int main() {
@@ -39,8 +45,6 @@ int main() {
 
 void menu() {
 	short int opc = 0;
-	int minimo = 0, maximo = 0, numGenerar = 0, aux = 0;
-	ColaGenerica<int> suerte;
 
 	while (opc != 3) {
 
@@ -54,35 +58,7 @@ void menu() {
 		cout << endl;
 
 		switch (opc) {
-			case 1:
-				cout << "Dígita el valor mínimo: ";
-				cin >> minimo;
-
-				cout << "\nDigita el valor máximo: ";
-				cin >> maximo;
-				
-				cout << "\nDigita la cantidad de números a generar: ";
-				cin >> numGenerar;
-
-				if (numGenerar > 0) {
-					pausarPantalla();
-					limpiarPantalla();
-
-					cout << "Los números de la suerte son:\n\n";
-
-					for (int i = 0; i < numGenerar; i++) {
-						aux = ranNum(minimo, maximo);
-
-						cout << i+1 << ". " << aux << endl;
-
-						suerte.insertar(aux);
-						escribir("numeros_suerte2.txt", aux);
-					}
-				} else {
-					cout << "Error: solo se aceptan cantidades positivas.";
-				}
-
-				break;
+			case 1: numsSuerte(); break;
 			case 2:
 				// abrirArchivo("numeros_suerte2.txt");
 				break;
@@ -98,10 +74,19 @@ void menu() {
 	}
 }
 
-void escribir(string file, int num) {
+void borrar(string file) {
 	ofstream archivo;
 
-	// file = "archivo/" + file;
+	archivo.open("archivos/" + file, ios::out);
+
+	if (!archivo) {
+		cerr << "No se pudo abrir el archivo\n";
+		exit(1);
+	}
+}
+
+void escribir(string file, int num) {
+	ofstream archivo;
 
 	archivo.open("archivos/" + file, ios::app);
 
@@ -112,6 +97,7 @@ void escribir(string file, int num) {
 
 	archivo << num << endl;
 }
+
 
 void leer(string file) {
 	ifstream archivo;
@@ -141,8 +127,58 @@ void limpiarPantalla() {
 	#endif
 }
 
-int ranNum(int minimo, int maximo) {
-	return rand() % (maximo - minimo + 1) + minimo;
+void numsSuerte() {
+	int n, n1, n2;
+	ColaGenerica<int> q;
+	randomize;
+	// número inicial de elementos de la lista
+	n = 11 + random(N);
+	// se generan n números aleatorios
+	for (int i = 1; i <= n; i++) {
+		q.insertar(random(N * 3));
+	}
+
+	// se genera aleatoriamente el intervalo n1
+	n1 = 1 + random(11);
+	// se retiran de la cola elementos a distancia n1
+
+	cout << "Se quitan los números:\n\n";
+
+	while (n1 <= n) {
+		int nt;
+		n2 = 0; // contador de elementos que quedan
+
+		for (int i = 1; i <= n; i++) {
+			nt = q.quitar();
+
+			if (i % n1 == 1) {
+				cout << nt << endl;
+			} else {
+				q.insertar(nt); // se vuelve a meter en la cola
+				n2++;
+			}
+		}
+		n = n2;
+		n1 = 1 + random(11);
+	}
+
+	cout << "\nLos números de la suerte son: \n\n";
+
+	mostrarCola(q);
+}
+
+template <class T> void mostrarCola(ColaGenerica<T> &q) {
+	int v;
+
+	borrar("numeros_suerte1.txt");
+
+	for (int i = 1; !q.colaVacia(); i++) {
+		v = q.quitar();
+		cout << i << ". " << v << endl;
+		escribir("numeros_suerte1.txt", v);
+	}
+	
+	cout << endl;
 }
 
 void opcInvalida() { cout << "Opción inválida. Inténtelo de nuevo."; }
