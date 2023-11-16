@@ -16,7 +16,6 @@
 #include "include/ColaGenerica.h"
 #include "src/ColaGenerica.cpp"
 
-
 const int N = 99;
 #define randomize (srand(time(NULL)))
 #define random(num) (rand() % (num))
@@ -58,9 +57,9 @@ void menu() {
 		cout << endl;
 
 		switch (opc) {
-			case 1: 
+			case 1:
 			case 2:
-				numsSuerte(opc); 
+				numsSuerte(opc);
 				break;
 			case 3:
 				cout << "Has salido del programa. ¡Vuelve pronto!\n";
@@ -98,7 +97,6 @@ void escribir(string file, int num) {
 	archivo << num << endl;
 }
 
-
 ifstream leer(string file) {
 	ifstream archivo;
 
@@ -112,18 +110,18 @@ ifstream leer(string file) {
 	return archivo;
 }
 
-void pausarPantalla(){
+void pausarPantalla() {
 	cout << "\n\nPresiona <enter> para continuar.";
 	cin.ignore();
 	cin.get();
 }
 
 void limpiarPantalla() {
-	#ifdef _WIN32
-		system("cls"); // Para Windows
-	#else
-		system("clear"); // Para sistemas basados en Unix/Linux
-	#endif
+#ifdef _WIN32
+	system("cls"); // Para Windows
+#else
+	system("clear"); // Para sistemas basados en Unix/Linux
+#endif
 }
 
 void numsSuerte(int origen) {
@@ -133,7 +131,7 @@ void numsSuerte(int origen) {
 	// número inicial de elementos de la lista
 	n = 11 + random(N);
 
-	if(origen == 1){ 
+	if (origen == 1) {
 		for (int i = 1; i <= n; i++) {
 			q.insertar(random(N * 3));
 		}
@@ -155,16 +153,21 @@ void numsSuerte(int origen) {
 		int nt;
 		n2 = 0; // contador de elementos que quedan
 
-		for (int i = 1; i <= n; i++) {
-			nt = q.quitar();
+		try {
+			for (int i = 1; i <= n; i++) {
+				nt = q.quitar();
 
-			if (i % n1 == 1) {
-				cout << nt << endl;
-			} else {
-				q.insertar(nt); // se vuelve a meter en la cola
-				n2++;
+				if (i % n1 == 1) {
+					cout << nt << endl;
+				} else {
+					q.insertar(nt); // se vuelve a meter en la cola
+					n2++;
+				}
 			}
+		} catch (const char *Mensaje) {
+			cerr << "Error: " << Mensaje << endl;
 		}
+
 		n = n2;
 		n1 = 1 + random(11);
 	}
@@ -179,12 +182,16 @@ template <class T> void mostrarCola(ColaGenerica<T> &q) {
 
 	borrar("numeros_suerte1.txt");
 
-	for (int i = 1; !q.colaVacia(); i++) {
-		v = q.quitar();
-		cout << i << ". " << v << endl;
-		escribir("numeros_suerte1.txt", v);
+	try {
+		for (int i = 1; !q.colaVacia(); i++) {
+			v = q.quitar();
+			cout << i << ". " << v << endl;
+			escribir("numeros_suerte1.txt", v);
+		}
+	} catch (const char *Mensaje) {
+		cerr << "Error: " << Mensaje << endl;
 	}
-	
+
 	cout << endl;
 }
 
