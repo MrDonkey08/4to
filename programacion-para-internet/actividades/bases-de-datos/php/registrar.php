@@ -1,9 +1,9 @@
 <?php
-	include 'conexion.php';
+include 'conexion.php';
 
 $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
-$correo= $_POST["correo"];
+$correo = $_POST["correo"];
 
 // Insertar campos
 
@@ -25,20 +25,21 @@ if (mysqli_num_rows($verificar_correo) > 0) {
 
 $resultado = mysqli_query($conexion, $insertar);
 
-if(!$resultado) {
+if (!$resultado) {
 	echo '<script>
 			alert("Error de registro");
 			window.history.go(-1);
 		</script>';
-		exit;
+	exit;
 } else {
 	echo '<script>
-			alert("Error de registro");
+			alert("Registro efectuado");
 			window.history.go(-1);
 		</script>';
-		exit;
+	exit;
 }
 
 // Cerrar consultas
 
-mysqli_close($conexion);
+//mysqli_close($conexion);
+?>

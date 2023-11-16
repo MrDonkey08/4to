@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
@@ -11,34 +11,33 @@
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
+	
 	<body>
 		<header class="header">
 			<h1 class="head-1">Plantilla de formulario</h1>
 			<img src="./img/favicon.png" alt="Recipiente" />
 		</header>
 
-		<form action="./php/registar.php" method="post" class="contenedor">
+		<form action="./php/registrar.php" method="post" class="contenedor">
 			<fieldset>
 				<h2 class="head-2">Datos de entrada</h2>
-				<div class="contenedor-2">
-					<div class="datos">
-						<div class="dato">
-							<label for="">Nombre:</label>
-							<input placeholder="Nombre" class="input-data" name="" id="nombre" />
-						</div>
-						<div class="dato">
-							<label for="">Apellidos:</label>
-							<input placeholder="Apellidos" class="input-data" name="" id="apellidos" />
-						</div>
-						<div class="dato">
-							<label for="">Correo electrónico:</label>
-							<input placeholder="Correo electrónico" class="input-data" name="" id="email" />
-						</div>
+				<div class="campos">
+					<div class="campo">
+						<label for="">nombre:</label>
+						<input required class="input-text" placeholder="nombre" class="input-data" name="nombre" id="nombre" />
+					</div>
+					<div class="campo">
+						<label for="">Apellidos:</label>
+						<input required class="input-text" placeholder="apellidos" class="input-data" name="apellido" id="apellido" />
+					</div>
+					<div class="campo">
+						<label for="">Correo electrónico:</label>
+						<input required class="input-text" placeholder="correo" class="input-data" name="correo" id="correo" />
 					</div>
 				</div>
 			</fieldset>
-			<div class="contenedor-boton">
-				<input name="btncalcular" class="boton" type="submit" value="Calcular" />
+			<div class="alinear-boton">
+				<input name="btncalcular" class="boton" type="submit" value="Enviar" />
 			</div>
 		</form>
 	</body>
