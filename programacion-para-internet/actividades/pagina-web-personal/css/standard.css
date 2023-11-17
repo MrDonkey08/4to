@@ -51,7 +51,7 @@ button:hover {
 
 }
 
-fieldset {
+fieldset, .campos-fondo {
 	padding: 50px 50px;
 	color: white;
 	border: #11437c solid 2px;
@@ -117,11 +117,14 @@ tr:nth-child(even) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: #11337c;
+}
+
+.icon-service {
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
 	padding: 25px;
-	background-color: #11337c;
 }
 
 .tarjeta {
