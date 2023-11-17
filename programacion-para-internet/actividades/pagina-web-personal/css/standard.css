@@ -71,6 +71,40 @@ legend {
 	text-transform: uppercase;
 }
 
+table {
+	border-collapse: collapse;
+	width: 100%;
+	background-color: #5a75c0;
+	color: #e9e9e9;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:hover, tr:nth-child(even):hover, .tbl-title:hover  {
+	color: black;
+	background-color: #b5b3ca;
+}
+
+tr:nth-child(odd):hover{
+	color: white;
+	background-color: #616891;
+}
+
+tr:nth-child(even) {
+	color: black;
+	background-color: #e8e5f0;
+}
+
+.tbl-title {
+	background-color: #365eca;
+}
+
+
+
 .bloque {
 	color: #181616;
 	margin: 40px 15%;
