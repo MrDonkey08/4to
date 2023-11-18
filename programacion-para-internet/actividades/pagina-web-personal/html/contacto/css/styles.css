@@ -1,3 +1,8 @@
+iframe {
+	margin: 5px;
+	border-radius: 10px;
+}
+
 .campos-fondo {
 	display: flex;
 	flex-direction: column;
@@ -22,8 +27,16 @@
 	justify-self: center;
 }
 
-#tarjeta-datos {
+.card {
 	padding: 25px;
 	border-radius: 30px;
 	background-color: #5370af;
+}
+
+#datos-contacto {
+	margin-top: 25px;
+}
+
+#ubicacion {
+	margin-top: 40px;
 }
