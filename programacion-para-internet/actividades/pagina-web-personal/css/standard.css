@@ -18,6 +18,10 @@ body {
 	background-color: #e8e5f0;
 }
 
+.mi-titulo {
+	text-decoration: none;
+}
+
 h1 {
 	color: #DC3535
 }
