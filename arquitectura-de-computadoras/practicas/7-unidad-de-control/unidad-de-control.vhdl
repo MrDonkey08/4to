@@ -198,7 +198,7 @@ BEGIN
 					END IF;
 				WHEN d17 =>
 					cs <= "11110";
-					edo_ futuro <= d0;
+					edo_futuro <= d0;
 			END CASE;
 		END IF;
 	END PROCESS procesoA;
