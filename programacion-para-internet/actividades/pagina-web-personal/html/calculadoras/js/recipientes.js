@@ -126,7 +126,8 @@ function calcularRecipiente() {
 	espesorTapasCalculado.value = tCalTapas.toFixed(4);
 	espesorCuerpoCalculado.value = tCalCuerpo.toFixed(4);
 
-	/* Calcular volumen y peso del líquido */
+	// Calcular volumen y peso del líquido
+	
 	vTapasLiquido = (Math.PI / 12) * Math.pow(diametro1, 3);
 	vCuerpoLiquido = ((Math.PI * longitud1) / 4) * Math.pow(diametro1, 2);
 	vTLiquido = vTapasLiquido + vCuerpoLiquido;

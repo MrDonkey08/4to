@@ -31,11 +31,11 @@
 				<div class="campos">
 					<div class="campo">
 						<label for="presion">Presión interna:</label>
-						<input placeholder="MPa" type="number" id="presion" />
+						<input required placeholder="MPa" type="number" id="presion" />
 					</div>
 					<div class="campo">
 						<label for="diametro">Diámetro:</label>
-						<input placeholder="metros" type="number" id="diametro" />
+						<input required placeholder="metros" type="number" id="diametro" />
 					</div>
 					<div class="campo">
 						<label for="material">Material:</label>
@@ -49,7 +49,7 @@
 					</div>
 					<div class="campo">
 						<label for="longitud">Longitud:</label>
-						<input placeholder="metros" type="number" id="longitud" />
+						<input required placeholder="metros" type="number" id="longitud" />
 					</div>
 					<div class="campo">
 						<label for="eficiencia">Eficiencia de la junta:</label>
@@ -61,11 +61,11 @@
 					</div>
 					<div class="campo">
 						<label for="densidad">ρ del líquido:</label>
-						<input placeholder="kg/m³" type="number" id="densidad" />
+						<input required placeholder="kg/m³" type="number" id="densidad" />
 					</div>
 					<div class="campo">
 						<label for="nivel">Nivel:</label>
-						<input placeholder="metros" type="number" id="nivel" />
+						<input required placeholder="metros" type="number" id="nivel" />
 					</div>
 				</div>
 				<button id="btn-recipientes">Calcular</button>
@@ -77,7 +77,7 @@
 				<div class="campos">
 					<div class="campo">
 						<label for="espesor-tapas-calculado">Espesor de las tapas calculado:</label>
-						<input disabled type="number" id="espesor-tapas-calculado" />
+						<input readonly type="number" id="espesor-tapas-calculado" />
 					</div>
 					<div class="campo">
 						<label for="espesor-tapas-comercial">Espesor comercial de las tapas:</label>
@@ -101,7 +101,7 @@
 					</div>
 					<div class="campo">
 						<label for="espesor-cuerpo-calculado">Espesor del cuerpo calculado:</label>
-						<input disabled type="number" id="espesor-cuerpo-calculado" />
+						<input readonly type="number" id="espesor-cuerpo-calculado" />
 					</div>
 					<div class="campo">
 						<label for="espesor-cuerpo-comercial">Espesor comercial del cuerpo:</label>
@@ -125,11 +125,11 @@
 					</div>
 					<div class="campo">
 						<label for="peso-vacio">Peso del equipo vacio:</label>
-						<input type="number" id="peso-vacio" />
+						<input readonly type="number" id="peso-vacio" />
 					</div>
 					<div class="campo">
 						<label for="peso-lleno">Peso del equipo lleno:</label>
-						<input type="number" id="peso-lleno" />
+						<input readonly type="number" id="peso-lleno" />
 					</div>
 				</div>
 			</fieldset>
@@ -145,11 +145,11 @@
 				<div class="campos">
 					<div class="campo" id="peso">
 						<label for="input-peso">Peso:</label>
-						<input type="number" id="input-peso" placeholder="kg" />
+						<input required type="number" id="input-peso" placeholder="kg" />
 					</div>
 					<div class="campo" id="altura">
 						<label for="input-altura">Altura:</label>
-						<input type="number" id="input-altura" placeholder="cm" />
+						<input required type="number" id="input-altura" placeholder="cm" />
 					</div>
 				</div>
 				<button id="btn-imc">Calcular</button>
@@ -161,11 +161,11 @@
 				<div class="campos">
 					<div class="campo" id="imc">
 						<label for="input-imc">IMC:</label>
-						<input disabled type="number" id="input-imc" placeholder="IMC" />
+						<input readonly type="number" id="input-imc" placeholder="IMC" />
 					</div>
 					<div class="campo" id="composicion-corporal">
 						<label for="input-composicion-corporal">Composicion corporal:</label>
-						<input disabled type="text" id="input-composicion-corporal" placeholder="Composicion Corporal" />
+						<input readonly type="text" id="input-composicion-corporal" placeholder="Composicion Corporal" />
 					</div>
 				</div>
 			</fieldset>
@@ -179,7 +179,7 @@
 				<div class="campos-2">
 					<div class="campo" id="temp">
 						<label for="input-temp">Temperatura:</label>
-						<input type="number" id="input-temp" placeholder="Temperatura" />
+						<input required type="number" id="input-temp" placeholder="Temperatura" />
 					</div>
 					<div class="campo" id="temp-in">
 						<label for="opt-temp-in">Entrada</label>
