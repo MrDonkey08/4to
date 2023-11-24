@@ -31,7 +31,7 @@
 				<div class="campos">
 					<div class="campo">
 						<label for="presion">Presión interna:</label>
-						<input placeholder="MPa" type="number" id="presion-interna" />
+						<input placeholder="MPa" type="number" id="presion" />
 					</div>
 					<div class="campo">
 						<label for="diametro">Diámetro:</label>
@@ -68,7 +68,7 @@
 						<input placeholder="metros" type="number" id="nivel" />
 					</div>
 				</div>
-				<button>Calcular</button>
+				<button id="btn-recipientes">Calcular</button>
 			</fieldset>
 
 			<h3>Datos de Salida</h3>
@@ -76,12 +76,12 @@
 				<legend>Variables de salida</legend>
 				<div class="campos">
 					<div class="campo">
-						<label for="espesor">Espesor de las tapas calculado:</label>
-						<input disabled type="number" id="espesor" />
+						<label for="espesor-tapas-calculado">Espesor de las tapas calculado:</label>
+						<input disabled type="number" id="espesor-tapas-calculado" />
 					</div>
 					<div class="campo">
-						<label for="espesor-tapas">Espesor comercial de las tapas:</label>
-						<select id="espesor-tapas">
+						<label for="espesor-tapas-comercial">Espesor comercial de las tapas:</label>
+						<select id="espesor-tapas-comercial">
 							<option value="1">1/8 de pulgada</option>
 							<option value="2">1/4 de pulgada</option>
 							<option value="3">1/3 de pulgada</option>
@@ -100,12 +100,12 @@
 						</select>
 					</div>
 					<div class="campo">
-						<label for="presion">Espesor del cuerpo calculado:</label>
-						<input disabled type="number" id="presion" />
+						<label for="espesor-cuerpo-calculado">Espesor del cuerpo calculado:</label>
+						<input disabled type="number" id="espesor-cuerpo-calculado" />
 					</div>
 					<div class="campo">
-						<label for="espesor-cuerpo">Espesor comercial del cuerpo:</label>
-						<select id="espesor-cuerpo">
+						<label for="espesor-cuerpo-comercial">Espesor comercial del cuerpo:</label>
+						<select id="espesor-cuerpo-comercial">
 							<option value="1">1/8 de pulgada</option>
 							<option value="2">1/4 de pulgada</option>
 							<option value="3">1/3 de pulgada</option>
@@ -124,12 +124,12 @@
 						</select>
 					</div>
 					<div class="campo">
-						<label for="nivel-1">Peso del equipo vacio:</label>
-						<input disabled type="number" id="nivel-1" />
+						<label for="peso-vacio">Peso del equipo vacio:</label>
+						<input type="number" id="peso-vacio" />
 					</div>
 					<div class="campo">
-						<label for="nivel-2">Peso del equipo lleno:</label>
-						<input disabled type="number" id="nivel-2" />
+						<label for="peso-lleno">Peso del equipo lleno:</label>
+						<input type="number" id="peso-lleno" />
 					</div>
 				</div>
 			</fieldset>
