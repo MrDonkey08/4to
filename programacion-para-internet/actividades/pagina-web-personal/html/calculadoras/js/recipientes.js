@@ -25,79 +25,79 @@ const btnRecipientes = document.getElementById("btn-recipientes");
 
 let UTS = Ys = S = tComercialBody = eta = tCalTapas = tCalCuerpo = vThicknessBody = vThicknessTapa = tComercialTapa = vTapas = vCuerpo = vTotal = vCuerpoLiquido = vTapasLiquido = pLiquido = vTLiquido = 0;
 
-switch (parseFloat(material.value)) {
-	case 1:
-		UTS = 415;
-		Ys = 230;
-		break;
-	case 2:
-		UTS = 450;
-		Ys = 275;
-		break;
-	case 3:
-		UTS = 485;
-		Ys = 275;
-		break;
-	case 4:
-		UTS = 415;
-		Ys = 220;
-		break;
-	case 5:
-		UTS = 485;
-		Ys = 260;
-		break;
-}
+function calcularRecipiente() {
+	switch (parseFloat(material.value)) {
+		case 1:
+			UTS = 415;
+			Ys = 230;
+			break;
+		case 2:
+			UTS = 450;
+			Ys = 275;
+			break;
+		case 3:
+			UTS = 485;
+			Ys = 275;
+			break;
+		case 4:
+			UTS = 415;
+			Ys = 220;
+			break;
+		case 5:
+			UTS = 485;
+			Ys = 260;
+			break;
+	}	
 
 	// Esfuerzo permisible
 	S = Math.min(UTS / 3.5, (Ys * 2) / 3);
 
-switch (parseFloat(eficiencia.value)) {
-	case 1: eta = 1; break;
-	case 2: eta = 0.85; break;
-	case 3: eta = 0.75; break;
-}
+	switch (parseFloat(eficiencia.value)) {
+		case 1: eta = 1; break;
+		case 2: eta = 0.85; break;
+		case 3: eta = 0.75; break;
+	}
 
-tCalTapas = (presion.value * diametro.value) / (2 * eta * S - 0.2 * presion.value);
-tCalCuerpo = (presion.value * (diametro.value / 2)) / (eta * S - 0.6 * presion.value);
+	tCalTapas = (presion.value * diametro.value) / (2 * eta * S - 0.2 * presion.value);
+	tCalCuerpo = (presion.value * (diametro.value / 2)) / (eta * S - 0.6 * presion.value);
 
-tCalTapas = tCalTapas / 0.0254;
-tCalCuerpo = tCalCuerpo / 0.0254;
+	tCalTapas = tCalTapas / 0.0254;
+	tCalCuerpo = tCalCuerpo / 0.0254;
 
-vThicknessBody = parseFloat(espesorCuerpoComercial.value);
+	vThicknessBody = parseFloat(espesorCuerpoComercial.value);
 
-switch (vThicknessBody) {
-	case 1: tComercialBody = 1 / 8; break;
-	case 2: tComercialBody = 1 / 4; break;
-	case 3: tComercialBody = 3 / 8; break;
-	case 4: tComercialBody = 5 / 8; break;
-	case 5: tComercialBody = 3 / 4; break;
-	case 6: tComercialBody = 7 / 8; break;
-	case 7: tComercialBody = 1; break;
-	case 8: tComercialBody = 1 + 1 / 4; break;
-	case 9: tComercialBody = 1 + 1 / 2; break;
-	case 10: tComercialBody = 1 + 3 / 4; break;
-	case 11: tComercialBody = 2; break;
-}
+	switch (vThicknessBody) {
+		case 1: tComercialBody = 1 / 8; break;
+		case 2: tComercialBody = 1 / 4; break;
+		case 3: tComercialBody = 3 / 8; break;
+		case 4: tComercialBody = 5 / 8; break;
+		case 5: tComercialBody = 3 / 4; break;
+		case 6: tComercialBody = 7 / 8; break;
+		case 7: tComercialBody = 1; break;
+		case 8: tComercialBody = 1 + 1 / 4; break;
+		case 9: tComercialBody = 1 + 1 / 2; break;
+		case 10: tComercialBody = 1 + 3 / 4; break;
+		case 11: tComercialBody = 2; break;
+	}
 
-// Espesor comercial de las tapas
+	// Espesor comercial de las tapas
 
-vThicknessTapa = parseFloat(espesorTapasComercial.value);
+	vThicknessTapa = parseFloat(espesorTapasComercial.value);
 
-switch (vThicknessTapa) {
-	case 1: tComercialTapa = 1 / 8; break;
-	case 2: tComercialTapa = 1 / 4; break;
-	case 3: tComercialTapa = 3 / 8; break;
-	case 4: tComercialTapa = 5 / 8; break;
-	case 5: tComercialTapa = 3 / 4; break;
-	case 6: tComercialTapa = 7 / 8; break;
-	case 7: tComercialTapa = 1; break;
-	case 8: tComercialTapa = 1 + 1 / 4; break;
-	case 9: tComercialTapa = 1 + 1 / 2; break;
-	case 10: tComercialTapa = 1 + 3 / 4; break;
-	case 11: tComercialTapa = 2; break;
-}
+	switch (vThicknessTapa) {
+		case 1: tComercialTapa = 1 / 8; break;
+		case 2: tComercialTapa = 1 / 4; break;
+		case 3: tComercialTapa = 3 / 8; break;
+		case 4: tComercialTapa = 5 / 8; break;
+		case 5: tComercialTapa = 3 / 4; break;
+		case 6: tComercialTapa = 7 / 8; break;
+		case 7: tComercialTapa = 1; break;
+		case 8: tComercialTapa = 1 + 1 / 4; break;
+		case 9: tComercialTapa = 1 + 1 / 2; break;
+		case 10: tComercialTapa = 1 + 3 / 4; break;
+		case 11: tComercialTapa = 2; break;
+	}
 
-function calcularRecipiente() {
 	if (tComercialBody < tCalCuerpo) {
 		espesorCuerpoCalculado.style.backgroundColor = "rgb(255,199,206)";
 		espesorCuerpoCalculado.style.color = "rgb(156,0,6)";
