@@ -39,8 +39,11 @@ p {
 	text-align: justify;
 }
 
-button, .res {
+button {
 	text-transform: uppercase;
+}
+
+button, .res {
 	border-radius: 1.75rem;
 	color: white;
 	margin-top: 20px;
