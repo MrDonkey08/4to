@@ -12,121 +12,122 @@
 	</head>
 
 	<body>
-		<a class="mi-titulo" href="./../../index.html">
-			<h1>Alan Yahir Juárez Rubio <span>Ingeniero en Computación</span></h1>
-		</a>
+		<h1>Alan Yahir Juárez Rubio <span>Ingeniero en Computación</span></h1>
 
 		<section id="recipientes-a-presion" class="bloque">
 			<h2>Recipientes a Presión</h2>
 
 			<h3>Datos de Entrada</h3>
-			<fieldset>
-				<legend>Variables de Entrada</legend>
-				<div class="campos">
-					<div class="campo">
-						<label for="presion">Presión interna:</label>
-						<input placeholder="MPa" type="number" id="presion-interna" />
-					</div>
-					<div class="campo">
-						<label for="diametro">Diámetro:</label>
-						<input placeholder="metros" type="number" id="diametro" />
-					</div>
-					<div class="campo">
-						<label for="material">Material:</label>
-						<select id="material">
-							<option value="1">SA-283 gr D</option>
-							<option value="2">SA-662 gr B</option>
-							<option value="3">SA-537</option>
-							<option value="4">SA-515 gr 60</option>
-							<option value="5">SA-516 gr 70</option>
-						</select>
-					</div>
-					<div class="campo">
-						<label for="longitud">Longitud:</label>
-						<input placeholder="metros" type="number" id="longitud" />
-					</div>
-					<div class="campo">
-						<label for="eficiencia">Eficiencia de la junta:</label>
-						<select id="eficiencia">
-							<option value="1">Radiografiado completo (100%)</option>
-							<option value="2">Radiografiado parcial (85%)</option>
-							<option value="3">Sin Radiografiado (75%)</option>
-						</select>
-					</div>
-					<div class="campo">
-						<label for="densidad">ρ del líquido:</label>
-						<input placeholder="kg/m³" type="number" id="densidad" />
-					</div>
-					<div class="campo">
-						<label for="nivel">Nivel:</label>
-						<input placeholder="metros" type="number" id="nivel" />
-					</div>
-				</div>
-				<button>Calcular</button>
-			</fieldset>
 
-			<h3>Datos de Salida</h3>
-			<fieldset>
-				<legend>Variables de salida</legend>
-				<div class="campos">
-					<div class="campo">
-						<label for="espesor">Espesor de las tapas calculado:</label>
-						<input disabled type="number" id="espesor" />
+			<form method="post">
+				<fieldset>
+					<legend>Variables de Entrada</legend>
+					<div class="campos">
+						<div class="campo">
+							<label for="presion">Presión interna:</label>
+							<input required placeholder="MPa" type="number" id="presion" name="presion" />
+						</div>
+						<div class="campo">
+							<label for="diametro">Diámetro:</label>
+							<input required placeholder="metros" type="number" id="diametro" name="diametro" />
+						</div>
+						<div class="campo">
+							<label for="material">Material:</label>
+							<select id="material ">
+								<option value="1">SA-283 gr D</option>
+								<option value="2">SA-662 gr B</option>
+								<option value="3">SA-537</option>
+								<option value="4">SA-515 gr 60</option>
+								<option value="5">SA-516 gr 70</option>
+							</select>
+						</div>
+						<div class="campo">
+							<label for="longitud">Longitud:</label>
+							<input required placeholder="metros" type="number" id="longitud" name="longitud" />
+						</div>
+						<div class="campo">
+							<label for="eficiencia">Eficiencia de la junta:</label>
+							<select id="eficiencia name=" eficienci"">
+								<option value="1">Radiografiado completo (100%)</option>
+								<option value="2">Radiografiado parcial (85%)</option>
+								<option value="3">Sin Radiografiado (75%)</option>
+							</select>
+						</div>
+						<div class="campo">
+							<label for="densidad">ρ del líquido:</label>
+							<input required placeholder="kg/m³" type="number" id="densidad" name="densidad" />
+						</div>
+						<div class="campo">
+							<label for="nivel">Nivel:</label>
+							<input required placeholder="metros" type="number" id="nivel" name="nivel" />
+						</div>
 					</div>
-					<div class="campo">
-						<label for="espesor-tapas">Espesor comercial de las tapas:</label>
-						<select id="espesor-tapas">
-							<option value="1">1/8 de pulgada</option>
-							<option value="2">1/4 de pulgada</option>
-							<option value="3">1/3 de pulgada</option>
-							<option value="4">3/8 de pulgada</option>
-							<option value="5">1/2 de pulgada</option>
-							<option value="6">5/8 de pulgada</option>
-							<option value="7">3/4 de pulgada</option>
-							<option value="8">7/8 de pulgada</option>
-							<option value="9">1 de pulgada</option>
-							<option value="10">1 1/4 de pulgada</option>
-							<option value="11">1 3/8 de pulgada</option>
-							<option value="12">1 1/2 de pulgada</option>
-							<option value="13">1 5/8 de pulgada</option>
-							<option value="14">1 3/4 de pulgada</option>
-							<option value="15">2 de pulgada</option>
-						</select>
+					<button id="btn-temp" type="submit" name="recipiente-submit">Calcular</button>
+				</fieldset>
+
+				<h3>Datos de Salida</h3>
+				<fieldset>
+					<legend>Variables de salida</legend>
+					<div class="campos">
+						<div class="campo">
+							<label for="espesor-tapas-calculado">Espesor de las tapas calculado:</label>
+							<input readonly type="number" id="espesor-tapas-calculado" name="espesor-tapas-calculado" />
+						</div>
+						<div class="campo">
+							<label for="espesor-tapas-comercial">Espesor comercial de las tapas:</label>
+							<select id="espesor-tapas-comercial name=" espesor-tapas-comercia"">
+								<option value="1">1/8 de pulgada</option>
+								<option value="2">1/4 de pulgada</option>
+								<option value="3">1/3 de pulgada</option>
+								<option value="4">3/8 de pulgada</option>
+								<option value="5">1/2 de pulgada</option>
+								<option value="6">5/8 de pulgada</option>
+								<option value="7">3/4 de pulgada</option>
+								<option value="8">7/8 de pulgada</option>
+								<option value="9">1 de pulgada</option>
+								<option value="10">1 1/4 de pulgada</option>
+								<option value="11">1 3/8 de pulgada</option>
+								<option value="12">1 1/2 de pulgada</option>
+								<option value="13">1 5/8 de pulgada</option>
+								<option value="14">1 3/4 de pulgada</option>
+								<option value="15">2 de pulgada</option>
+							</select>
+						</div>
+						<div class="campo">
+							<label for="espesor-cuerpo-calculado">Espesor del cuerpo calculado:</label>
+							<input readonly type="number" id="espesor-cuerpo-calculado" name="espesor-cuerpo-calculado" />
+						</div>
+						<div class="campo">
+							<label for="espesor-cuerpo-comercial">Espesor comercial del cuerpo:</label>
+							<select id="espesor-cuerpo-comercial" name="espesor-cuerpo-comercia"">
+								<option value="1">1/8 de pulgada</option>
+								<option value="2">1/4 de pulgada</option>
+								<option value="3">1/3 de pulgada</option>
+								<option value="4">3/8 de pulgada</option>
+								<option value="5">1/2 de pulgada</option>
+								<option value="6">5/8 de pulgada</option>
+								<option value="7">3/4 de pulgada</option>
+								<option value="8">7/8 de pulgada</option>
+								<option value="9">1 de pulgada</option>
+								<option value="10">1 1/4 de pulgada</option>
+								<option value="11">1 3/8 de pulgada</option>
+								<option value="12">1 1/2 de pulgada</option>
+								<option value="13">1 5/8 de pulgada</option>
+								<option value="14">1 3/4 de pulgada</option>
+								<option value="15">2 de pulgada</option>
+							</select>
+						</div>
+						<div class="campo">
+							<label for="peso-vacio">Peso del equipo vacio:</label>
+							<input readonly type="number" id="peso-vacio" name="peso-vacio" />
+						</div>
+						<div class="campo">
+							<label for="peso-lleno">Peso del equipo lleno:</label>
+							<input readonly type="number" id="peso-lleno" name="peso-lleno" />
+						</div>
 					</div>
-					<div class="campo">
-						<label for="presion">Espesor del cuerpo calculado:</label>
-						<input disabled type="number" id="presion" />
-					</div>
-					<div class="campo">
-						<label for="espesor-cuerpo">Espesor comercial del cuerpo:</label>
-						<select id="espesor-cuerpo">
-							<option value="1">1/8 de pulgada</option>
-							<option value="2">1/4 de pulgada</option>
-							<option value="3">1/3 de pulgada</option>
-							<option value="4">3/8 de pulgada</option>
-							<option value="5">1/2 de pulgada</option>
-							<option value="6">5/8 de pulgada</option>
-							<option value="7">3/4 de pulgada</option>
-							<option value="8">7/8 de pulgada</option>
-							<option value="9">1 de pulgada</option>
-							<option value="10">1 1/4 de pulgada</option>
-							<option value="11">1 3/8 de pulgada</option>
-							<option value="12">1 1/2 de pulgada</option>
-							<option value="13">1 5/8 de pulgada</option>
-							<option value="14">1 3/4 de pulgada</option>
-							<option value="15">2 de pulgada</option>
-						</select>
-					</div>
-					<div class="campo">
-						<label for="nivel-1">Peso del equipo vacio:</label>
-						<input disabled type="number" id="nivel-1" />
-					</div>
-					<div class="campo">
-						<label for="nivel-2">Peso del equipo lleno:</label>
-						<input disabled type="number" id="nivel-2" />
-					</div>
-				</div>
-			</fieldset>
+				</fieldset>
+			</form>
 		</section>
 
 		<section id="calculo-imc" class="bloque">
@@ -144,11 +145,11 @@
 					<div class="campos">
 						<div class="campo" id="peso">
 							<label for="input-peso">Peso:</label>
-							<input type="number" id="input-peso" name="peso" placeholder="kg" value="<?php echo $peso ?>" step="0.1" required />
+							<input required type="number" id="input-peso" name="peso" placeholder="kg" value="<?php echo $peso ?>" step="0.1" />
 						</div>
 						<div class="campo" id="altura">
 							<label for="input-altura">Altura:</label>
-							<input type="number" id="input-altura" name="altura" placeholder="cm" value="<?php echo $altura; ?>" required />
+							<input required type="number" id="input-altura" name="altura" placeholder="cm" value="<?php echo $altura; ?>" />
 						</div>
 					</div>
 					<button id="btn-imc" type="submit" name="imc-submit">Calcular</button>
@@ -160,11 +161,11 @@
 					<div class="campos">
 						<div class="campo" id="imc">
 							<label for="input-imc">IMC:</label>
-							<input type="number" id="input-imc" class="<?php echo $estado ?>" name="imc" placeholder="IMC" value="<?php echo $imc; ?>" readonly />
+							<input readonly type="number" id="input-imc" class="<?php echo $estado ?>" name="imc" placeholder="IMC" value="<?php echo $imc; ?>" />
 						</div>
 						<div class="campo" id="composicion-corporal">
 							<label for="input-composicion-corporal">Composicion corporal:</label>
-							<input type="text" id="input-composicion-corporal" class="<?php echo $estado ?> name="composicion-corporal" placeholder="Composicion Corporal" value="<?php echo $comp; ?>" readonly />
+							<input readonly type="text" id="input-composicion-corporal" class="<?php echo $estado ?> name=" composicion-corporal" placeholder="Composicion Corporal" value="<?php echo $comp; ?>" />
 						</div>
 					</div>
 				</fieldset>
