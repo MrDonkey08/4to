@@ -8,6 +8,16 @@
 		<link rel="stylesheet" href="./css/standard.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
 
+		<?php
+			if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recipientes-submit'])) {
+				require './php/recipientes.php';
+			} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['imc-submit'])) {
+				require './php/imc.php';
+			} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['temp-submit'])) {
+				require './php/temperaturas.php';
+			}
+		?>
+
 		<title>Calculadoras</title>
 	</head>
 
@@ -33,7 +43,7 @@
 						</div>
 						<div class="campo">
 							<label for="material">Material:</label>
-							<select id="material ">
+							<select id="material" name="material">
 								<option value="1">SA-283 gr D</option>
 								<option value="2">SA-662 gr B</option>
 								<option value="3">SA-537</option>
@@ -47,7 +57,7 @@
 						</div>
 						<div class="campo">
 							<label for="eficiencia">Eficiencia de la junta:</label>
-							<select id="eficiencia name=" eficienci"">
+							<select id="eficiencia" name=" eficiencia">
 								<option value="1">Radiografiado completo (100%)</option>
 								<option value="2">Radiografiado parcial (85%)</option>
 								<option value="3">Sin Radiografiado (75%)</option>
@@ -75,7 +85,7 @@
 						</div>
 						<div class="campo">
 							<label for="espesor-tapas-comercial">Espesor comercial de las tapas:</label>
-							<select id="espesor-tapas-comercial name=" espesor-tapas-comercia"">
+							<select id="espesor-tapas-comercial" name="espesor-tapas-comercial">
 								<option value="1">1/8 de pulgada</option>
 								<option value="2">1/4 de pulgada</option>
 								<option value="3">1/3 de pulgada</option>
@@ -99,7 +109,7 @@
 						</div>
 						<div class="campo">
 							<label for="espesor-cuerpo-comercial">Espesor comercial del cuerpo:</label>
-							<select id="espesor-cuerpo-comercial" name="espesor-cuerpo-comercia"">
+							<select id="espesor-cuerpo-comercial" name="espesor-cuerpo-comercial">
 								<option value="1">1/8 de pulgada</option>
 								<option value="2">1/4 de pulgada</option>
 								<option value="3">1/3 de pulgada</option>
@@ -135,10 +145,6 @@
 
 			<h3>Datos de Entrada</h3>
 
-			<?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['imc-submit'])) {
-				require './php/imc.php';
-			} ?>
-
 			<form method="post">
 				<fieldset>
 					<legend>Variables de Entrada</legend>
@@ -165,7 +171,7 @@
 						</div>
 						<div class="campo" id="composicion-corporal">
 							<label for="input-composicion-corporal">Composicion corporal:</label>
-							<input readonly type="text" id="input-composicion-corporal" class="<?php echo $estado ?> name=" composicion-corporal" placeholder="Composicion Corporal" value="<?php echo $comp; ?>" />
+							<input readonly type="text" id="input-composicion-corporal" class="<?php echo $estado ?>" name="composicion-corporal" placeholder="Composicion Corporal" value="<?php echo $comp; ?>" />
 						</div>
 					</div>
 				</fieldset>
@@ -174,10 +180,6 @@
 
 		<section id="conversor-temp" class="bloque">
 			<h2>Conversor de Temperaturas</h2>
-
-			<?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['temp-submit'])) {
-				require './php/temperaturas.php';
-			} ?>
 
 			<form method="post">
 				<fieldset>
