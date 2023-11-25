@@ -34,15 +34,15 @@
 					<div class="campos">
 						<div class="campo">
 							<label for="presion">Presión interna:</label>
-							<input required placeholder="MPa" type="number" id="presion" name="presion" value="<?php echo $presion; ?>" />
+							<input required placeholder="MPa" type="number" id="presion" name="presion" value="<?php echo $presion; ?>" step="0.000001" />
 						</div>
 						<div class="campo">
 							<label for="diametro">Diámetro:</label>
-							<input required placeholder="metros" type="number" id="diametro" name="diametro" value="<?php echo $diametro; ?>" />
+							<input required placeholder="metros" type="number" id="diametro" name="diametro" value="<?php echo $diametro; ?>" step="0.000001" />
 						</div>
 						<div class="campo">
 							<label for="material">Material:</label>
-							<select id="material" name="material" value="<?php echo $material; ?>">
+							<select id="material" name="material">
 								<option value="1">SA-283 gr D</option>
 								<option value="2">SA-662 gr B</option>
 								<option value="3">SA-537</option>
@@ -52,11 +52,11 @@
 						</div>
 						<div class="campo">
 							<label for="longitud">Longitud:</label>
-							<input required placeholder="metros" type="number" id="longitud" name="longitud" value="<?php echo $longitud; ?>" />
+							<input required placeholder="metros" type="number" id="longitud" name="longitud" value="<?php echo $longitud; ?>" step="0.000001" />
 						</div>
 						<div class="campo">
 							<label for="eficiencia">Eficiencia de la junta:</label>
-							<select id="eficiencia" name=" eficiencia" value=" <?php echo $eficiencia; ?>">
+							<select id="eficiencia" name=" eficiencia">
 								<option value="1">Radiografiado completo (100%)</option>
 								<option value="2">Radiografiado parcial (85%)</option>
 								<option value="3">Sin Radiografiado (75%)</option>
@@ -64,11 +64,11 @@
 						</div>
 						<div class="campo">
 							<label for="densidad">ρ del líquido:</label>
-							<input required placeholder="kg/m³" type="number" id="densidad" name="densidad" value="<?php echo $densidad; ?>" />
+							<input required placeholder="kg/m³" type="number" id="densidad" name="densidad" value="<?php echo $densidad; ?>" step="0.000001" />
 						</div>
 						<div class="campo">
 							<label for="nivel">Nivel:</label>
-							<input required placeholder="metros" type="number" id="nivel" name="nivel" value="<?php echo $nivel; ?>" />
+							<input required placeholder="metros" type="number" id="nivel" name="nivel" value="<?php echo $nivel; ?>" step="0.000001" />
 						</div>
 					</div>
 					<button id="btn-temp" type="submit" name="recipiente-submit">Calcular</button>
@@ -108,7 +108,7 @@
 						</div>
 						<div class="campo">
 							<label for="espesor-cuerpo-comercial">Espesor comercial del cuerpo:</label>
-							<select id="espesor-cuerpo-comercial" name="espesor-cuerpo-comercial" value="<?php echo $espesorCuerpoComercial; ?>">
+							<select id="espesor-cuerpo-comercial" name="espesor-cuerpo-comercial">
 								<option value="1">1/8 de pulgada</option>
 								<option value="2">1/4 de pulgada</option>
 								<option value="3">1/3 de pulgada</option>
@@ -150,11 +150,11 @@
 					<div class="campos">
 						<div class="campo" id="peso">
 							<label for="input-peso">Peso:</label>
-							<input required type="number" id="input-peso" name="peso" placeholder="kg" value="<?php echo $peso; ?>" step="0.1" />
+							<input required type="number" id="input-peso" name="peso" placeholder="kg" value="<?php echo $peso; ?>" step="0.0001" />
 						</div>
 						<div class="campo" id="altura">
 							<label for="input-altura">Altura:</label>
-							<input required type="number" id="input-altura" name="altura" placeholder="cm" value="<?php echo $altura; ?>" />
+							<input required type="number" id="input-altura" name="altura" placeholder="cm" value="<?php echo $altura; ?>" step="0.1" />
 						</div>
 					</div>
 					<button id="btn-imc" type="submit" name="imc-submit">Calcular</button>
@@ -186,7 +186,7 @@
 					<div class="campos-2">
 						<div class="campo" id="temp">
 							<label for="input-temp">Temperatura:</label>
-							<input type="number" id="input-temp" name="temp" placeholder="Temperatura" value="<?php echo $inputTemp; ?>" />
+							<input required type="number" id="input-temp" name="temp" placeholder="Temperatura" value="<?php echo $inputTemp; ?>" step="0.00001" />
 						</div>
 						<div class="campo" id="temp-in">
 							<label for="opt-temp-in">Entrada</label>

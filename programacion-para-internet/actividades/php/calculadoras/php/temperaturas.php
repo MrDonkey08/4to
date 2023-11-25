@@ -59,7 +59,7 @@ function getTemp() {
 		}
 	}
 
-    $temp = round($temp, 5);
+    $temp = round($temp, 3);
 
     if ($optTempOut == "K") {
         $symbol = " ";
