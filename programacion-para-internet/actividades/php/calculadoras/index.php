@@ -144,13 +144,11 @@
 					<div class="campos">
 						<div class="campo" id="peso">
 							<label for="input-peso">Peso:</label>
-							<input type="number" id="input-peso" name="peso" placeholder="kg" value="<?php echo $peso ?>"
-								step="0.1" required />
+							<input type="number" id="input-peso" name="peso" placeholder="kg" value="<?php echo $peso ?>" step="0.1" required />
 						</div>
 						<div class="campo" id="altura">
 							<label for="input-altura">Altura:</label>
-							<input type="number" id="input-altura" name="altura" placeholder="cm"
-								value="<?php echo $altura; ?>" required />
+							<input type="number" id="input-altura" name="altura" placeholder="cm" value="<?php echo $altura; ?>" required />
 						</div>
 					</div>
 					<button id="btn-imc" type="submit" name="imc-submit">Calcular</button>
@@ -162,13 +160,11 @@
 					<div class="campos">
 						<div class="campo" id="imc">
 							<label for="input-imc">IMC:</label>
-							<input type="number" id="input-imc" name="imc" placeholder="IMC" value="<?php echo $imc; ?>"
-								readonly />
+							<input type="number" id="input-imc" class="<?php echo $estado ?>" name="imc" placeholder="IMC" value="<?php echo $imc; ?>" readonly />
 						</div>
 						<div class="campo" id="composicion-corporal">
 							<label for="input-composicion-corporal">Composicion corporal:</label>
-							<input type="text" id="input-composicion-corporal" name="composicion-corporal"
-								placeholder="Composicion Corporal" value="<?php echo $comp; ?>" readonly />
+							<input type="text" id="input-composicion-corporal" class="<?php echo $estado ?> name="composicion-corporal" placeholder="Composicion Corporal" value="<?php echo $comp; ?>" readonly />
 						</div>
 					</div>
 				</fieldset>
@@ -188,8 +184,7 @@
 					<div class="campos-2">
 						<div class="campo" id="temp">
 							<label for="input-temp">Temperatura:</label>
-							<input type="number" id="input-temp" name="temp" placeholder="Temperatura"
-								value="<?php echo ($inputTemp) ?>" />
+							<input type="number" id="input-temp" name="temp" placeholder="Temperatura" value="<?php echo ($inputTemp) ?>" />
 						</div>
 						<div class="campo" id="temp-in">
 							<label for="opt-temp-in">Entrada</label>

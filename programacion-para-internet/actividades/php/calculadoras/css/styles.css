@@ -6,6 +6,29 @@ h3 {
 	color: #11337c;
 }
 
+/* Status's */
+
+.normal, .bueno {
+	color: #006100;
+	background-color: #C6EDCE;
+}
+
+.medio-bueno {
+	color: #E7B10A;
+	background-color: #FFFEC4;
+}
+
+.medio-malo {
+	color: #F94C10;
+	background-color: #EFD595;
+}
+
+.malo {
+	color: #9C0006;
+	background-color: #FFC7CE;
+}
+
+
 #main-menu {
 	display: flex;
 	justify-content: space-around;
