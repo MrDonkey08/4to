@@ -192,3 +192,25 @@ tr:nth-child(even) {
 	justify-content: center;
 	align-items: center;
 }
+
+/* Status's */
+
+.normal, .bueno, .good {
+	color: #006100;
+	background-color: #C6EDCE;
+}
+
+.medio-bueno {
+	color: #E7B10A;
+	background-color: #FFFEC4;
+}
+
+.medio-malo {
+	color: #F94C10;
+	background-color: #EFD595;
+}
+
+.malo, .warning {
+	color: #9C0006;
+	background-color: #FFC7CE;
+}
