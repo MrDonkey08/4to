@@ -138,7 +138,7 @@
 				require './php/imc.php';
 			} ?>
 
-			<form method="post" action="">
+			<form method="post">
 				<fieldset>
 					<legend>Variables de Entrada</legend>
 					<div class="campos">
@@ -182,7 +182,7 @@
 				require './php/temperaturas.php';
 			} ?>
 
-			<form method="post" action="">
+			<form method="post">
 				<fieldset>
 					<legend>Variables de Entrada</legend>
 					<div class="campos-2">
@@ -197,6 +197,7 @@
 								<option value="C">°C</option>
 								<option value="F">°F</option>
 								<option value="K">K</option>
+								<option value="Ra">°Ra</option>
 							</select>
 						</div>
 						<div class="campo" id="temp-out">
@@ -205,6 +206,7 @@
 								<option value="C">°C</option>
 								<option value="F">°F</option>
 								<option value="K">K</option>
+								<option value="Ra">°Ra</option>
 							</select>
 						</div>
 					</div>
