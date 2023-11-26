@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Página Web Personal</title>
+
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
 		<link rel="stylesheet" href="./css/standard.css" />
+
+		<title>Página Web Personal</title>
 	</head>
 	<body>
 		<a class="mi-titulo" href="./index.html"><h1>Alan Yahir Juárez Rubio <span>Ingeniero en Computación</span></h1></a>
@@ -88,28 +90,28 @@
 								<div class="campos-2">
 									<div class="campo" id="nombre">
 										<label for="nombre-input">Nombre:</label>
-										<input type="text" id="nombre-input" name="nombre" placeholder="Nombre(s)" />
+										<input required type="text" id="nombre-input" name="nombre" placeholder="Nombre(s)" />
 									</div>
 
 									<div class="campo" id="apellido">
 										<label for="apellido-input">Apellido:</label>
-										<input type="text" id="apellido-input" name="apellido" placeholder="Apellido" />
+										<input required type="text" id="apellido-input" name="apellido" placeholder="Apellido" />
 									</div>
 
 									<div class="campo" id="telefono">
 										<label for="telefono-input">Teléfono:</label>
-										<input type="text" id="telefono-input" name="telefono" placeholder="33 3333 3333" />
+										<input required type="tel" id="telefono-input" name="telefono" placeholder="33 3333 3333" />
 									</div>
 								</div>
 
 								<div class="campo" id="e-mail">
 									<label for="e-mail-input">Correo electrónico:</label>
-									<input type="text" id="e-mail-input" name="e-mail" placeholder="tu@correo.com" />
+									<input required type="email" id="e-mail-input" name="e-mail" placeholder="tu@correo.com" />
 								</div>
 
 								<div class="campo" id="mensaje">
 									<label for="mensaje-input">Mensaje</label>
-									<input type="text" id="mensaje-input" name="mensaje" placeholder="Escribe tu mensaje" />
+									<textarea required id="mensaje-input" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
 								</div>
 							</div>
 							<button type="submit">Enviar</button>
