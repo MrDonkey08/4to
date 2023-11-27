@@ -31,7 +31,7 @@ BEGIN
 		ELSE
 			CASE edo_presente IS
 				WHEN d0 =>
-					IF irq - "10" THEN
+					IF irq = "10" THEN
 						cs <= "11100";
 						edo_futuro <= d1;
 					ELSIF irq = "01" THEN
@@ -42,21 +42,21 @@ BEGIN
 						edo_futuro <= d3;
 					END IF;
 				WHEN d1 =>
-					IF irq - "10" THEN
+					IF irq = "10" THEN
 						pcontrol <= "01000000";
-						edo_futuro <= dl;
+						edo_futuro <= d1;
 					ELSIF irq = "01" THEN
 						pcontrol <= "10000000";
-						edo_futuro <= di;
+						edo_futuro <= d1;
 					ELSE
-						cs = "11110";
+						cs <= "11110";
 						edo_futuro <= d3;
 					END IF;
 				WHEN d2 =>
 					cs <= cs;
 					edo_futuro <= d5;
 				WHEN d3 =>
-					cs = "10110";
+					cs <= "10110";
 					rw <= '1';
 					edo_futuro <= d4;
 				WHEN d4 =>
@@ -69,14 +69,14 @@ BEGIN
 						edo_futuro <= d5;
 					ELSIF datain = "0010" THEN
 						cs <= "00011";
-						edo_futuro = d5;
-					ELSIF datain - "0011" THEN
+						edo_futuro <= d5;
+					ELSIF datain = "0011" THEN
 						cs <= "00100";
 						edo_futuro <= d5;
-					ELSIF datain - "0100" THEN
+					ELSIF datain = "0100" THEN
 						cs <= "00101";
 						edo_futuro <= d5;
-					ELSIF datain - "0101" THEN
+					ELSIF datain = "0101" THEN
 						cs <= "00110";
 						edo_futuro <= d5;
 					ELSIF datain = "0110" THEN
@@ -99,7 +99,7 @@ BEGIN
 						IF rc(0) = '1' THEN
 							edo_futuro <= d10;
 						ELSE
-							edo_futuro = d0;
+							edo_futuro <= d0;
 						END IF;
 					ELSIF datain = "1100" THEN
 						cs <= "11111";
@@ -114,8 +114,8 @@ BEGIN
 							edo_futuro <= d0;
 						END IF;
 					ELSIF datain = "1110" THEN
-						@s <= "11111";
-						IF rc(3) - '1' THEN
+						cs <= "11111";
+						IF rc(3) = '1' THEN
 							edo_futuro <= d10;
 						ELSE
 							edo_futuro <= d0;
@@ -126,22 +126,22 @@ BEGIN
 					edo_futuro <= d11;
 				WHEN d6 =>
 					cs <= "10110";
-					rw = '1';
+					rw <= '1';
 					edo_futuro <= d12;
 				WHEN d7 =>
 					cs <= "10110";
 					rw <= '1';
 					edo_futuro <= d11;
-				WHEN dB =>
+				WHEN d8 =>
 					cs <= "10110";
-					rw = 1';
+					rw <= '1';
 					edo_futuro <= d15;
 				WHEN d9 =>
 					cs <= "11000";
 					edo_futuro <= d10;
 				WHEN d10 =>
 					cs <= "10110";
-					rw = '1';
+					rw <= '1';
 					edo_futuro <= d16;
 				WHEN d11 =>
 					cs <= "10001";
@@ -154,7 +154,7 @@ BEGIN
 					pcontrol(1) <= datain(1);
 					pcontrol(2) <= datain(2);
 					pcontrol(3) <= datain(3);
-					pcontrol(4) <= pcontro1(4);
+					pcontrol(4) <= pcontrol(4);
 					pcontrol(5) <= pcontrol(5);
 					pcontrol(6) <= pcontrol(6);
 					pcontrol(7) <= pcontrol(7);
@@ -164,9 +164,9 @@ BEGIN
 					rw <= '1';
 					edo_futuro <= d14;
 				WHEN d14 =>
-					c & <= "11010";
+					cs <= "11010";
 					rw <= '0';
-					pcontrol(0) <= pcontrol(0) :
+					pcontrol(0) <= pcontrol(0);
 					pcontrol(1) <= pcontrol(1);
 					pcontrol(2) <= pcontrol(2);
 					pcontrol(3) <= pcontrol(3);
@@ -177,7 +177,7 @@ BEGIN
 					edo_futuro <= d0;
 				WHEN d15 =>
 					cs <= "10010";
-					rw - '0';
+					rw <= '0';
 					edo_futuro <= d0;
 				WHEN d16 =>
 					cs <= "10000";
@@ -185,10 +185,10 @@ BEGIN
 					f(1) <= datain(1);
 					f(2) <= datain(2);
 					f(3) <= '0';
-					£(4) <= '0';
+					f(4) <= '0';
 					f(5) <= '0';
 					f(6) <= '0';
-					£(7) <= '0';
+					f(7) <= '0';
 					IF datain(3) = '0' THEN
 						pcontrol <= pcout + f;
 						edo_futuro <= d17;
