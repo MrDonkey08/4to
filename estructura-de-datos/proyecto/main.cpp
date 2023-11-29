@@ -44,30 +44,42 @@ int main() {
 	limpiarPantalla();
 
 	short int opc;
-	DiGrafica<int> Caminos;
+	DiGrafica<int> RedFerrov;
 
 	do {
 		opc = menu();
 
 		switch (opc) {
-			case 0:
+			case 0: 
 				break;
 
-			case 1:
+			case 1: {
+				RedFerrov.Warshall();
+				RedFerrov.Imprime(1);
 				break;
+			}
 
-			case 2:
+			case 2: {
+				RedFerrov.Floyd();
+				RedFerrov.Imprime(2);
 				break;
+			}
 
-			case 3:
+			case 3: {
+				RedFerrov.FloydVerInt();
+				RedFerrov.Imprime(3);
 				break;
+			}
 
-			case 4:
+			case 4: {
+				RedFerrov.Dijkstra();
+				RedFerrov.Imprime(4);
 				break;
+			}
 				
 			case 5:
 				cout << "Adiós, !bonito día! !Vuelve pronto!\n\n"
-					<< "Presiona <enter> para salir";
+				<< "Presiona <enter> para salir\n\n";
 				break;
 
 			default: opcInvalida(); break;
