@@ -3,7 +3,7 @@ Castellanos Ramirez Gustavo Fabian
 Guzmán Zavala Daniel
 Juárez Rubio Alan Yahir
 Hernandez Hurtado Leonel
-*/ 
+*/
 
 #include "./include/DiGrafica.h"
 #include "./src/DiGrafica.cpp"
@@ -11,7 +11,6 @@ Hernandez Hurtado Leonel
 #include "./include/colores.h"
 #include "./include/error.h"
 #include "./include/pantalla.h"
-
 
 #include <cstdlib> // for system function
 #include <fstream>
@@ -264,7 +263,7 @@ bool cargarDikstra(DiGrafica<int> &RedFerrov, bool Carga, int Nodo) {
 void crearCarpeta(string carpeta) {
 	// Use mkdir based on the operating system
 #ifdef _WIN32
-	if (_mkdir(Carpeta.c_str()) == 1) {
+	if (mkdir(carpeta.c_str()) == 1) {
 		cerr << "Error creating directory" << endl;
 		exit(EXIT_FAILURE);
 	}

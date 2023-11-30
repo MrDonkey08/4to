@@ -32,9 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="DiGrafica.cpp" />
-		<Unit filename="DiGrafica.h" />
+		<Unit filename="include/DiGrafica.h" />
+		<Unit filename="include/colores.h" />
+		<Unit filename="include/error.h" />
+		<Unit filename="include/pantalla.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/DiGrafica.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

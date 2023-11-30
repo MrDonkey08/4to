@@ -170,12 +170,13 @@ template <class T> void DiGrafica<T>::Floyd() {
 }
 
 // Método Floyd modificado para que, además de encontrar las distancias minimas entre todos los vertices de una digráfica, genere una matriz (VerInt) con los vertices intermedios utilizados para minimizar las distancias. Este método usa los atributos Vertices (arreglo que almacena los nombres de todos los vértices de la digráfica) y VerInt (arreglo donde se van guardando los vértices intermedios. Fue inicia- lizado en 0 en el método constructor).
-template <class T> void DiGrafica<T>::FloydVerInt() {
+template <class T>
+void DiGrafica<T>::FloydVerInt() {
 	int Ind1, Ind2, Ind3;
 
-	for (Ind3 = 0; Ind3 < NumVer; Ind3++) {
-		for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
-			for (Ind2 = 0; Ind2 < NumVer; Ind2++) {
+	for (Ind3= 0; Ind3 < NumVer; Ind3++) {
+		for (Ind1= 0; Ind1 < NumVer; Ind1 ++) {
+			for (Ind2= 0; Ind2 < NumVer; Ind2 ++) {
 				if ((MatAdy[Ind1][Ind3] + MatAdy[Ind3][Ind2]) < MatAdy[Ind1][Ind2]) {
 					MatAdy[Ind1][Ind2] = MatAdy[Ind1][Ind3] + MatAdy[Ind3][Ind2];
 					VerInt[Ind1][Ind2] = Vertices[Ind3];
