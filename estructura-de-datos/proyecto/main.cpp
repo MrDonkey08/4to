@@ -3,7 +3,7 @@ Castellanos Ramirez Gustavo Fabian
 Guzmán Zavala Daniel
 Juárez Rubio Alan Yahir
 Hernandez Hurtado Leonel
-*/
+*/ 
 
 #include "./include/DiGrafica.h"
 #include "./src/DiGrafica.cpp"
@@ -82,8 +82,7 @@ int main() {
 				break;
 
 			case 5:
-				cout << "Adiós, !Bonito día! !Vuelve pronto!\n\n"
-					<< "Presiona <enter> para salir";
+				cout << "Adiós, !Bonito día! !Vuelve pronto!\n\n";
 				pausarPantalla();
 				limpiarPantalla();
 				break;
@@ -263,7 +262,7 @@ bool cargarDikstra(DiGrafica<int> &RedFerrov, bool Carga, int Nodo) {
 void crearCarpeta(string carpeta) {
 	// Use mkdir based on the operating system
 #ifdef _WIN32
-	if (mkdir(carpeta.c_str()) == 1) {
+	if (_mkdir(Carpeta.c_str()) == 1) {
 		cerr << "Error creating directory" << endl;
 		exit(EXIT_FAILURE);
 	}
