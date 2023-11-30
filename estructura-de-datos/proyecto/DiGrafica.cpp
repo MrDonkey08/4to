@@ -1,6 +1,14 @@
+/*
+Castellanos Ramirez Gustavo Fabian
+Guzm�n Zavala Daniel
+Juarez Rubio Alan Yair
+Hernandez Hurtado  Leonel
+*/
 #include "DiGrafica.h"
+#include <windows.h>
+#include <limits>
 
-// Método constructor. Inicializa el número de vértices en cero y a la matriz de adyacencias MatAdy con un valor arbitrario muy grande (999), indicando que no existe camino entre los nodos correspondientes. Además, asigna ceros a los arreglos auxiliares que se usan en los métodos.
+// M�todo constructor. Inicializa el n�mero de vertices en cero y a la matriz de adyacencias MatAdy con un valor arbitrario muy grande (999), indicando que no existe camino entre los nodos correspondientes. Además, asigna ceros a los arreglos auxiliares que se usan en los métodos.
 template <class T>
 DiGrafica<T>::DiGrafica() {
 	int Ind1, Ind2;
@@ -13,7 +21,7 @@ DiGrafica<T>::DiGrafica() {
 			} else {
 				MatAdy[Ind1][Ind2] = 0;
 			}
-			
+
 			CerTran[Ind1][Ind2] = 0;
 			VerInt[Ind1][Ind2] = 0;
 		}
@@ -21,44 +29,54 @@ DiGrafica<T>::DiGrafica() {
 	NumVer = 0;
 }
 
-// Método que lee los datos de la gráfica dirigida directamente del teclado.
+// M�todo que lee los datos de la gr�fica dirigida directamente del teclado.
 template <class T>
 void DiGrafica<T>::Lee() {
 	int NumArcos, Indice, Origen, Destino;
 
-	cout << "\n\nIngrese número de vértices de la gráfica dirigida: ";
+	cout << "Ingrese n�mero de v�rtices de la gr�fica dirigida: ";
 	cin >> NumVer;
 
-	cout << "\n\nIngrese los nombres de los vértices de la gráfica dirigida: ";
+	cout << "\n\nIngrese los nombres de los v�rtices de la gr�fica dirigida: ";
+
+	cout << "\n";
 
 	for (Indice = 0; Indice < NumVer; Indice++) {
+		cout << "\n\t";
 		cin >> Vertices[Indice];
 	}
 
-	cout << "\n\nTotal de aristas de la gráfica dirigida: ";
+	pausarPantalla();
+	system("cls");
+
+	cout << "Total de aristas de la gr�fica dirigida: ";
 	cin >> NumArcos;
+	cout << "\n\n";
 
 	for (Indice = 0; Indice < NumArcos; Indice++) {
-		cout << "\n\nIngrese vértice origen: ";
+		cout << "Ingrese v�rtice origen: ";
 		cin >> Origen;
 
-		cout << "\n\nIngrese vértice destino: ";
+		cout << "\n\nIngrese v�rtice destino: ";
 		cin >> Destino;
 
 		cout << "\n\nDistancia de origen a destino: ";
 		cin >> MatAdy[Origen - 1][Destino - 1];
 	}
+
+
+
 }
 
-// Método que imprime información relacionada a una gráfica dirigida. Por medio de un número entero se selecciona lo que se va a imprimir, lo cual depende del método aplicado para recorrer la digráfica.
+// M�todo que imprime informaci�n relacionada a una gr�fica dirigida. Por medio de un n�mero entero se selecciona lo que se va a imprimir, lo cual depende del m�todo aplicado para recorrer la digráfica.
 template <class T>
 void DiGrafica<T>::Imprime(int Opc) {
 	int Ind1, Ind2;
 
 	switch (Opc) {
-		// Impresión de la matriz de adyacencia o de costos.
+		// Impresi�n de la matriz de adyacencia o de costos.
 		case 0:
-			cout << "\n\nMatriz de Adyacencia o de Costos: \n\n";
+			cout << "Matriz de Adyacencia o de Costos: \n\n";
 
 			for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
 				cout << Vertices[Ind1] << ": ";
@@ -68,9 +86,9 @@ void DiGrafica<T>::Imprime(int Opc) {
 				cout << endl;
 			}
 			break;
-		// Impresión de la cerradura transitiva correspondiente a la matriz de adyacencia. Se obtiene cuando se aplica el método de Warshall.
+		// Impresi�n de la cerradura transitiva correspondiente a la matriz de adyacencia. Se obtiene cuando se aplica el método de Warshall.
 		case 1:
-			cout << "\n\nCerradura Transitiva de la Matriz de Adyacencia:" << endl;
+			cout << "Cerradura Transitiva de la Matriz de Adyacencia:" << endl << endl;
 
 			for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
 				cout << Vertices[Ind1] << ":";
@@ -80,21 +98,21 @@ void DiGrafica<T>::Imprime(int Opc) {
 				cout << endl;
 			}
 			break;
-		// Impresión de la matriz de distancias mínimas entre todos los vértices de la gráfica. Se obtiene por medio del método de Floyd.
+		// Impresi�n de la matriz de distancias m�nimas entre todos los vertices de la grafica. Se obtiene por medio del método de Floyd.
 		case 2:
-			cout << "\n\nMatriz de Distancias Mínimas: " << endl;
+			cout << "Matriz de Distancias M�nimas: " << endl << endl;
 
 			for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
 				cout << Vertices[Ind1] << ":";
 				for (Ind2 = 0; Ind2 < NumVer; Ind2++) {
 					cout << MatAdy[Ind1][Ind2] << "\t";
 				}
-				cout << endl;
+			 cout << endl;
 			}
 			break;
-		// Impresión de la matriz con los vértices intermedios usados para establecer los caminos de distancias mínimas. Esta impresión complementa la de la opción 2 cuando se aplica el método FloydVerInt.
+		// Impresi�n de la matriz con los vertices intermedios usados para establecer los caminos de distancias mínimas. Esta impresión complementa la de la opción 2 cuando se aplica el método FloydVerInt.
 		case 3:
-			cout << "\n\nVértices Intermedios para lograr distancias mínimas:" << endl;
+			cout << "V�rtices Intermedios para lograr distancias m�nimas:" << endl << endl;
 
 			for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
 				for (Ind2 = 0; Ind2 < NumVer; Ind2++) {
@@ -103,9 +121,9 @@ void DiGrafica<T>::Imprime(int Opc) {
 				cout << endl;
 			}
 			break;
-		// Impresión de las distancias mínimas entre un vértice y los demás. Se obtiene con el método de Dijkstra.
+		// Impresi�n de las distancias m�nimas entre un vertice y los dem�s. Se obtiene con el método de Dijkstra.
 		case 4:
-			cout << "\n\nDistancias mínimas a partir del vértice:" << Vertices[0] << "\n\n";
+			cout << "\n\nDistancias m�nimas a partir del v�rtice:" << Vertices[0] << "\n\n";
 
 			for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
 				cout << " " << DistMin[Ind1] << "\t" << endl;
@@ -114,23 +132,23 @@ void DiGrafica<T>::Imprime(int Opc) {
 
 		default: break;
 	}
-	cout << endl;
+
 }
 
-// Método que determina si existe un camino entre cada uno de los  vértices de la gráfica dirigida. CerTran es una matriz que representa  la cerradura transitiva de la matriz de adyacencia. 
+// M�todo que determina si existe un camino entre cada uno de los  vertices de la gr�fica dirigida. CerTran es una matriz que representa  la cerradura transitiva de la matriz de adyacencia.
 
 template <class T>
 void DiGrafica<T>::Warshall() {
 	int Ind1, Ind2, Ind3;
-	// En la posición i,j de la matriz de adyacencia se asignó el valor 999 si no existe un camino directo del vértice i al vértice j. La cerradura transitiva se forma inicialmente a partir de la matriz de adyacencia. 
+	// En la posici�n i,j de la matriz de adyacencia se asigna el valor 999 si no existe un camino directo del vertice i al vertice j. La cerradura transitiva se forma inicialmente a partir de la matriz de adyacencia.
 	for (Ind1= 0; Ind1 < NumVer; Ind1  ++) {
 		for (Ind2= 0; Ind2 < NumVer; Ind2  ++) {
 			if (MatAdy[Ind1][Ind2] != 999) { CerTran[Ind1][Ind2]= 1; }
 		}
 	}
 
-	// Se recorren todos los vértices para determinar si existe un camino entre él y los demás, usando otros vértices como intermedios. 
-	for (Ind3= 0; Ind3 < NumVer; Ind3  ++) {	
+	// Se recorren todos los vetices para determinar si existe un camino entre �l y los dem�s, usando otros vertices como intermedios.
+	for (Ind3= 0; Ind3 < NumVer; Ind3  ++) {
 		for (Ind1= 0; Ind1 < NumVer; Ind1  ++) {
 			for (Ind2= 0; Ind2 < NumVer; Ind2  ++) {
 				CerTran[Ind1][Ind2] |=
@@ -141,7 +159,7 @@ void DiGrafica<T>::Warshall() {
 	}
 }
 
-// Método que encuentra el camino de costo mínimo entre todos los vértices de la gráfica dirigida. Va modificando la matriz de adyacencia a medida que encuentra un camino más corto entre dos vértices. 
+// M�todo que encuentra el camino de costo m�nimo entre todos los vertices de la gr�fica dirigida. Va modificando la matriz de adyacencia a medida que encuentra un camino m�s corto entre dos vértices.
 
 template <class T> void DiGrafica<T>::Floyd() {
 	int Ind1, Ind2, Ind3;
@@ -156,7 +174,7 @@ template <class T> void DiGrafica<T>::Floyd() {
 	}
 }
 
-// Método Floyd modificado para que, además de encontrar las distancias mínimas entre todos los vértices de una digráfica, genere una matriz (VerInt) con los vértices intermedios utilizados para minimizar las distancias. Este método usa los atributos Vertices (arreglo que almacena los nombres de todos los vértices de la digráfica) y VerInt (arreglo donde se van guardando los vértices intermedios. Fue inicia- lizado en 0 en el método constructor). 
+// M�todo Floyd modificado para que, adem�s de encontrar las distancias minimas entre todos los vertices de una digr�fica, genere una matriz (VerInt) con los vertices intermedios utilizados para minimizar las distancias. Este método usa los atributos Vertices (arreglo que almacena los nombres de todos los vértices de la digráfica) y VerInt (arreglo donde se van guardando los vértices intermedios. Fue inicia- lizado en 0 en el método constructor).
 
 template <class T>
 void DiGrafica<T>::FloydVerInt() {
@@ -174,29 +192,30 @@ void DiGrafica<T>::FloydVerInt() {
 	}
 }
 
-// Método que encuentra la distancia mínima entre un vértice dado y los demás vértices de una gráfica dirigida. En el arreglo DistMin se almacenan las distancias mínimas desde el vértice origen a cada uno de los otros nodos. Es decir DistMin[i] almacena la menor distancia entre el vértice origen y el vértice i. 
+// Método que encuentra la distancia mínima entre un v�rtice dado y los dem�s v�rtices de una gr�fica dirigida. En el arreglo DistMin se almacenan las distancias m�nimas desde el v�rtice origen a cada uno de los otros nodos. Es decir DistMin[i] almacena la menor distancia entre el vértice origen y el vértice i.
 
 
-template <class T> 
-void DiGrafica<T>::Dijkstra() {
+template <class T>
+int DiGrafica<T>::Dijkstra() {
 	int Aux[MAX], VertInc[MAX], Ver1, Ver2, Ind1, Ind2, Menor, Band, Origen;
-	// El arreglo VertInc se utiliza para guardar los vértices elegidos por ser los de la distancia mínima. El arreglo Aux es un arreglo lógico que indica si el nodo de la posición i ya fue incluido en VertInc y de esta manera evitar ciclos. 
+	// El arreglo VertInc se utiliza para guardar los vértices elegidos por ser los de la distancia m�nima. El arreglo Aux es un arreglo lógico que indica si el nodo de la posici�n i ya fue incluido en VertInc y de esta manera evitar ciclos.
 	for (Ind1 = 0; Ind1 < NumVer; Ind1++) {
 		Aux[Ind1] = 0;
-		VertInc[Ind1] = 0;	
+		VertInc[Ind1] = 0;
 	}
 
-	cout << "\n\n Ingrese vértice origen: ";
+	cout << "Ingrese v�rtice origen: ";
 	cin >> Origen;
+	Origen--;
 
 	Aux[Origen - 1] = 1;
-	// El arreglo donde se guardan las distancias mínimas del Origen a los demás vértices se inicializa con los valores de la matriz de adyacencia. 
+	// El arreglo donde se guardan las distancias m�nimas del Origen a los dem�s v�rtices se inicializa con los valores de la matriz de adyacencia.
 	for (Ind1 = 0; Ind1 < NumVer; Ind1++){
 		DistMin[Ind1] = MatAdy[Origen][Ind1];
 	}
 
 	for (Ind1 = 0; Ind1 << NumVer; Ind1++) {
-		// Se busca el vértice Ver1 en (Vertices - VertInc) tal que DistMin[Ver1] sea el mínimo valor. Se usa el 999 como valor inicial ya que es el elegido para indicar que no existe camino entre dos vértices. 
+		// Se busca el v�rtice Ver1 en (Vertices - VertInc) tal que DistMin[Ver1] sea el m�nimo valor. Se usa el 999 como valor inicial ya que es el elegido para indicar que no existe camino entre dos vértices.
 		Menor = 999;
 
 		for (Ind2 = 1; Ind2 < NumVer; Ind2++)
@@ -204,18 +223,18 @@ void DiGrafica<T>::Dijkstra() {
 				Ver1 = Ind2;
 				Menor = DistMin[Ind2];
 			}
-		// Se incluye Ver1 a VertInc y se actualiza el arreglo Aux. 
+		// Se incluye Ver1 a VertInc y se actualiza el arreglo Aux.
 		VertInc[Ind1] = Ver1;
 		Aux[Ver1] = 1;
 
-		// Se busca la distancia mínima para cada vértice Ver2 en (Vertices - VertInc). 		
+		// Se busca la distancia minima para cada vértice Ver2 en (Vertices - VertInc).
 		for (Ver2 = 1; Ver2 < NumVer; Ver2++) {
 			Band = 0;
-			
+
 			Ind2 = 1;
 
 			while (Ind2 < NumVer && !Band) {
-				if (VertInc[Ind2] == Ver2) { 
+				if (VertInc[Ind2] == Ver2) {
 					Band = 1;
 				} else {
 					Ind2++;
@@ -227,4 +246,132 @@ void DiGrafica<T>::Dijkstra() {
 			}
 		}
 	}
+
+	return Origen;
+}
+
+template <class T> void DiGrafica<T>:: pausarPantalla(){
+
+	cout << "\n\nPresiona <enter> para continuar.";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpiar el buffer de entrada despu�s de cada opci�n
+    cin.get();
+}
+
+template <class T> int DiGrafica<T>::getNumeroVertices(){
+
+	return NumVer;
+
+}
+
+template <class T> T* DiGrafica<T>::getVertices(){
+
+	T* Matriz = new T[getNumeroVertices()];
+
+	//Crear la matriz dinamicamente
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		Matriz[i] = Vertices[i];
+
+	}
+
+	return Matriz;
+
+}
+
+template <class T> T* DiGrafica<T>::getDistMin(){
+
+	T* Matriz = new T[getNumeroVertices()];
+
+	//Crear la matriz dinamicamente
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		Matriz[i] = DistMin[i];
+
+	}
+
+	return Matriz;
+
+}
+
+template <class T> T** DiGrafica<T>::getCerTran(){
+
+	T** Matriz = new T*[getNumeroVertices()];
+
+	//Crear la matriz dinamicamente
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		Matriz[i] = new T[getNumeroVertices()];
+
+	}
+
+	//Copiar matriz
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		for (int j = 0; j < getNumeroVertices(); j++) {
+
+				Matriz[i][j] = CerTran[i][j];
+
+		}
+	}
+
+	return Matriz;
+
+}
+
+template <class T> T** DiGrafica<T>::getMatAdy(){
+
+	T** Matriz = new T*[getNumeroVertices()];
+
+	//Crear la matriz dinamicamente
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		Matriz[i] = new T[getNumeroVertices()];
+
+	}
+
+	//Copiar matriz
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		for (int j = 0; j < getNumeroVertices(); j++) {
+
+				Matriz[i][j] = MatAdy[i][j];
+
+		}
+	}
+
+	return Matriz;
+
+}
+
+template <class T> T** DiGrafica<T>::getVerInt(){
+
+	T** Matriz = new T*[getNumeroVertices()];
+
+	//Crear la matriz dinamicamente
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		Matriz[i] = new T[getNumeroVertices()];
+
+	}
+
+	//Copiar matriz
+
+	for (int i = 0; i < getNumeroVertices(); i++){
+
+		for (int j = 0; j < getNumeroVertices(); j++) {
+
+				Matriz[i][j] = VerInt[i][j];
+
+		}
+	}
+
+	return Matriz;
+
 }
