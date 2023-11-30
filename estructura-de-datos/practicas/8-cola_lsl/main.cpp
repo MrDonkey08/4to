@@ -13,8 +13,8 @@
 #include <unistd.h> // Para sistemas basados en Unix/Linux
 #endif
 
-#include "include/ColaGenerica.h"
-#include "src/ColaGenerica.cpp"
+#include "./include/ColaGenerica.h"
+#include "./src/ColaGenerica.cpp"
 
 const int N = 99;
 #define randomize (srand(time(NULL)))
