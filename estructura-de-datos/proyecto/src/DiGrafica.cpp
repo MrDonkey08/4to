@@ -198,6 +198,7 @@ template <class T> int DiGrafica<T>::Dijkstra() {
 
 	cout << "Ingrese vértice origen: ";
 	cin >> Origen;
+	Origen--;
 
 	Aux[Origen - 1] = 1;
 	// El arreglo donde se guardan las distancias mínimas del Origen a los demás vértices se inicializa con los valores de la matriz de adyacencia.

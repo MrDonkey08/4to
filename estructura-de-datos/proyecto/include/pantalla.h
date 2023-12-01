@@ -1,5 +1,12 @@
-#ifndef ERRORES_H 
-#define ERRORES_H
+/*
+Castellanos Ramirez Gustavo Fabian
+Guzmán Zavala Daniel
+Juárez Rubio Alan Yahir
+Hernandez Hurtado Leonel
+*/ 
+
+#ifndef PANTALLA_H 
+#define PANTALLA_H
 
 #include <iostream>
 #include <limits>
