@@ -4,7 +4,7 @@
 
 
 
-![Portada-UDG | left | 200](../../../../attachments/images/Portada-UDG.jpeg) ![Portada-CUCEI | right | 200](../../../../attachments/images/Portada-CUCEI.jpeg)
+![Portada-UDG | left | 200](../../../../attachments/images/portada-udg.jpeg) ![Portada-CUCEI | right | 200](../../../../attachments/images/portada-cucei.jpeg)
  
 <br> <br> <br> <br> <br><br> <br><br><br><br><br><br><br><br><br><br><br>
 
