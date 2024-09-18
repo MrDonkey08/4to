@@ -250,4 +250,5 @@ end Behavioral;
 
 ### Simulación
 
-Lamentablemente cada vez que intentabamos correr la simulación la computadora crasheaba
+Lamentablemente cada vez que intentabamos correr la simulación la computadora
+crasheaba

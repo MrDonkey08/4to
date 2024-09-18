@@ -1,21 +1,21 @@
-
 # Tarea 3 - Bisección
 
-> **Nombre:** Alan Yahir Juárez Rubio 
-> **Fecha:** 03/09/2023
+> **Nombre:** Alan Yahir Juárez Rubio **Fecha:** 03/09/2023
 
-> Realizar los siguientes ejercicios con $\text{fix} = 5$ y de la forma como se mostró en el vídeo. Resalta las respuestas.
+> Realizar los siguientes ejercicios con $\text{fix} = 5$ y de la forma como se
+> mostró en el vídeo. Resalta las respuestas.
 
-1. Use el método de Bisección para encontrar una solución de $f(x) = xe^x - 2$ en el intérvalo $[0, 1]$ con $\varepsilon = 0.004$.
+1. Use el método de Bisección para encontrar una solución de $f(x) = xe^x - 2$
+   en el intérvalo $[0, 1]$ con $\varepsilon = 0.004$.
 
-
-$$\begin{array}{cc}
+$$
+\begin{array}{cc}
 n \geq \cfrac{\ln[1 - 0] - \ln 0.004}{\ln 2} \approx 7.96578 &\to& n = 8
-\end{array}$$
-
+\end{array}
+$$
 
 | $n$ |  $X_i$  |  $X_d$  | $f(X_i)$ | $f(X_d)$ |  $X_m$  | $f(X_m)$ |
-|:---:|:-------:|:-------:|:--------:|:--------:|:-------:|:--------:|
+| :-: | :-----: | :-----: | :------: | :------: | :-----: | :------: |
 |  1  |    0    |    1    |    -2    | 0.71828  |   0.5   | -1.17564 |
 |  2  |   0.5   |    1    | -1.17564 | 0.71828  |  0.75   | -0.41225 |
 |  3  |  0.75   |    1    | -0.41225 | 0.71828  |  0.875  | 0.09902  |
@@ -28,25 +28,28 @@ n \geq \cfrac{\ln[1 - 0] - \ln 0.004}{\ln 2} \approx 7.96578 &\to& n = 8
 ![ Gráfica 1 | center | 325](attachments/bisección-1.png)
 
 > [!SUCCESS] Respuesta
-> 
+>
 > $$x \approx 0.85547$$
 
 > [!ERROR] Errores
-> 
+>
 > - $E_A = \lvert V_C - V_{Ap} \rvert = \lvert 0.85261 -  0.85547 \rvert = 0.00286$
 > - $E_R = \cfrac{E_A}{V_C} = \cfrac{0.00286}{0.85261} = 0.00335$
 > - $E_{RP} = E_R \cdot 100\% = 0.33529 \%$
 
 <div style="page-break-after: always;"></div>
 
-2. Sea $f(x) = x³ + 2x² + 10x - 20$, aproximar la solución de la ecuación en el intérvalo $[1, 2]$ con $\varepsilon = 0.003$
+2. Sea $f(x) = x³ + 2x² + 10x - 20$, aproximar la solución de la ecuación en el
+   intérvalo $[1, 2]$ con $\varepsilon = 0.003$
 
-$$\begin{array}{cc}
+$$
+\begin{array}{cc}
 n \geq \cfrac{\ln[2 - 1] - \ln 0.003}{\ln 2} \approx 8.38082 &\to& n  = 9
-\end{array}$$
+\end{array}
+$$
 
 | $n$ |  $X_i$  |  $X_d$  | $f(X_i)$ | $f(X_d)$ |  $X_m$  | $f(X_m)$ |
-|:---:|:-------:|:-------:|:--------:|:--------:|:-------:|:--------:|
+| :-: | :-----: | :-----: | :------: | :------: | :-----: | :------: |
 |  1  |    1    |    2    |    -7    |    16    |   1.5   |  2.875   |
 |  2  |    1    |   1.5   |    -7    |  2.875   |  1.25   | -2.42188 |
 |  3  |  1.25   |   1.5   | -2.42188 |  2.875   |  1.375  | 0.13086  |
@@ -55,32 +58,33 @@ n \geq \cfrac{\ln[2 - 1] - \ln 0.003}{\ln 2} \approx 8.38082 &\to& n  = 9
 |  6  | 1.34375 |  1.375  | -0.52481 | 0.13086  | 1.35938 | -0.19846 |
 |  7  | 1.35938 |  1.375  | -0.19846 | 0.13086  | 1.36719 | -0.03417 |
 |  8  | 1.36719 |  1.375  | -0.03417 | 0.13086  | 1.37109 | 0.04825  |
-|  9  | 1.36719 | 1.37109 | -0.03417 | 0.04825  | 1.36914 | 0.00702         |
+|  9  | 1.36719 | 1.37109 | -0.03417 | 0.04825  | 1.36914 | 0.00702  |
 
 ![ Gráfica 2 | center | 225](attachments/bisección-2.png)
 
-
 > [!SUCCESS] Respuesta
-> 
+>
 > $$x \approx 1.36914$$
 
 > [!ERROR] Errores
-> 
+>
 > - $E_A = \lvert 1.36881 -  1.36914 \rvert = 0.00033$
 > - $E_R = \cfrac{0.00033}{1.36881} = 0.0024$
 > - $E_{RP} = 0.02415 \%$
 
 <div style="page-break-after: always;"></div>
 
-3. Aproxime la solución de $f(x) = x - 3\sin (x) + 1 = 0$ en el intérvalo $[0, 1]$ con $\varepsilon = 0.005$   
+3. Aproxime la solución de $f(x) = x - 3\sin (x) + 1 = 0$ en el intérvalo
+   $[0, 1]$ con $\varepsilon = 0.005$
 
-$$\begin{array}{cc}
+$$
+\begin{array}{cc}
 n \geq \cfrac{\ln[1 - 0] - \ln 0.005}{\ln 2} \approx 7.64386 &\to& n = 8
-\end{array}$$
-
+\end{array}
+$$
 
 | $n$ |  $X_i$  |  $X_d$  | $f(X_i)$ | $f(X_d)$ |  $X_m$  | $f(X_m)$ |
-|:---:|:-------:|:-------:|:--------:|:--------:|:-------:|:--------:|
+| :-: | :-----: | :-----: | :------: | :------: | :-----: | :------: |
 |  1  |    0    |    1    |    1     | -0.52441 |   0.5   | 0.06172  |
 |  2  |   0.5   |    1    | 0.06172  | -0.52441 |  0.75   | -0.29492 |
 |  3  |   0.5   |  0.75   | 0.06172  | -0.29492 |  0.625  | -0.13039 |
@@ -88,16 +92,16 @@ n \geq \cfrac{\ln[1 - 0] - \ln 0.005}{\ln 2} \approx 7.64386 &\to& n = 8
 |  5  |   0.5   | 0.5625  | 0.06172  | -0.03741 | 0.53125 | 0.01142  |
 |  6  | 0.53125 | 0.5625  | 0.01142  | -0.03741 | 0.54688 | -0.1319  |
 |  7  | 0.53125 | 0.54688 | 0.01142  | -0.01319 | 0.53906 | -0.00093 |
-|  8  | 0.53125 | 0.53906 | 0.01142  | -0.00093 | 0.53516 | 0.00523         |
+|  8  | 0.53125 | 0.53906 | 0.01142  | -0.00093 | 0.53516 | 0.00523  |
 
 ![ Gráfica 2 | center | 300](attachments/bisección-3.png)
 
 > [!SUCCESS] Respuesta
-> 
+>
 > $$x \approx 0.53847$$
 
 > [!ERROR] Errores
-> 
+>
 > - $E_A = \lvert 0.53847 -  0.53516 \rvert = 0.00331$
 > - $E_R = \cfrac{0.00331}{0.53847} = 0.00615$
 > - $E_{RP} = 0.61540 \%$

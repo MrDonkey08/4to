@@ -1,20 +1,24 @@
 html {
-	
-	font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 body {
-	margin: 3rem;
+    margin: 3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: #548dd4;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #548dd4;
 }
 
 strong {
-	color:goldenrod
+    color: goldenrod;
 }
 
 a {
-	color: #326eb6;
+    color: #326eb6;
 }

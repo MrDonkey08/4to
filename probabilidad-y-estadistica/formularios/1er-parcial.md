@@ -12,7 +12,8 @@
 >
 > Población $= \sigma$ y muestras $= S$
 
-$$\begin{align}
+$$
+\begin{align}
     R &= \text{Dato mayor} - \text{Dato menor} \tag{Rango}\\\\
     \sigma_x^2 &= \cfrac{1}{n} \sum \left(x_i - \overline{x} \right)² &
     S_x^2 &= \cfrac{1}{n-1} \sum \left(x_i - \overline{x} \right)² \tag{Varianza}\\\\
@@ -22,12 +23,12 @@ $$\begin{align}
     CV &= \cfrac{S_x}{| \overline{x} |} \tag{Coeficiente de variación}\\\\
     R_{ic} &= Q_3 - Q_1, && \text{donde } Q_n = \text{cuartil } n \tag{Rango intercuartil}\\\\
     S_{xy} &= \cfrac 1n \sum (x-\overline{x})(y-\overline{y})\\\\
-\end{align}$$
+\end{align}
+$$
 
 ## Relación entre dos conjuntos de datos
 
 $$r = \cfrac{ \sum (x-\overline{x})(y-\overline{y})}{\sqrt{\sum (x-\overline{x})²(y-\overline{y})²}} = \cfrac{S_{xy}}{S_xS_y} \tag{Coeficiente de correlación muestral}$$
-
 
 > [!NOTE]
 >

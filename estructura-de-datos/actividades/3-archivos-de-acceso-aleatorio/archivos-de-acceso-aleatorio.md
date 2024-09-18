@@ -2,35 +2,51 @@
 
 ## Marco Teórico
 
-1. Los sistemas de reservación de aerolíneas, sistemas bancarios, sistemas de punto de venta, cajeros automáticos y demás tipos de sistemas de procesamiento de transacciones son ejemplos de aplicaciones de procesamiento de **archivos de acceso aleatorio**.  
+1. Los sistemas de reservación de aerolíneas, sistemas bancarios, sistemas de
+   punto de venta, cajeros automáticos y demás tipos de sistemas de
+   procesamiento de transacciones son ejemplos de aplicaciones de procesamiento
+   de **archivos de acceso aleatorio**.
 
 <a>
 
-2. Como lo hemos dicho antes C++ no impone una estructura en un archivo. De esta forma, las aplicaciones que deseen utilizar archivos de acceso aleatorio deben crearlos. Puede utilizarse una variedad de técnicas para crear archivos de este tipo. Tal vez el método más sencillo sea requerir que todos los registros en un archivo sean **del mismo tamaño**.  
+2. Como lo hemos dicho antes C++ no impone una estructura en un archivo. De esta
+   forma, las aplicaciones que deseen utilizar archivos de acceso aleatorio
+   deben crearlos. Puede utilizarse una variedad de técnicas para crear archivos
+   de este tipo. Tal vez el método más sencillo sea requerir que todos los
+   registros en un archivo sean **del mismo tamaño**.
 
 <a>
 
-3. Dibujar la Fig. 17.9 de la pág. 722 del libro del maestro Deitel 6ta. edición  
+3. Dibujar la Fig. 17.9 de la pág. 722 del libro del maestro Deitel 6ta. edición
 
 ![](attachments/fig-17.9-pp.722.jpg)
 
+4. ¿Para qué sirve la función seekp( )?
 
-4. ¿Para qué sirve la función seekp( )?  
+La función seekp() en C++ se utiliza para establecer la posición de escritura en
+un archivo de salida. Permite mover el puntero de escritura a una ubicación
+específica en el archivo, lo que es útil cuando se necesita escribir datos en
+una posición específica en lugar de al final del archivo.
 
-La función seekp() en C++ se utiliza para establecer la posición de escritura en un archivo de salida. Permite mover el puntero de escritura a una ubicación específica en el archivo, lo que es útil cuando se necesita escribir datos en una posición específica en lugar de al final del archivo.  
+5. ¿Para qué sirve la función write( )?
 
-5. ¿Para qué sirve la función write( )?  
+La función write() en C++ se utiliza para escribir datos en un archivo binario.
+Permite escribir una secuencia de bytes en el archivo, que puede ser cualquier
+tipo de datos, como estructuras o registros. Es útil para almacenar información
+en archivos binarios.
 
-La función write() en C++ se utiliza para escribir datos en un archivo binario. Permite escribir una secuencia de bytes en el archivo, que puede ser cualquier tipo de datos, como estructuras o registros. Es útil para almacenar información en archivos binarios.  
-  
+6. ¿Para qué sirve el operador reinterpret_cast?
 
-6. ¿Para qué sirve el operador reinterpret_cast?  
-  
-El operador reinterpret_cast en C++ se utiliza para convertir un puntero de un tipo a otro sin cambiar el valor apuntado. Se utiliza principalmente en situaciones donde se necesita convertir un puntero a un tipo de dato en otro tipo de dato, como cuando se trabaja con archivos binarios y se necesita interpretar los bytes en una estructura específica. Es importante usarlo con precaución, ya que puede generar problemas si no se realiza correctamente.
+El operador reinterpret_cast en C++ se utiliza para convertir un puntero de un
+tipo a otro sin cambiar el valor apuntado. Se utiliza principalmente en
+situaciones donde se necesita convertir un puntero a un tipo de dato en otro
+tipo de dato, como cuando se trabaja con archivos binarios y se necesita
+interpretar los bytes en una estructura específica. Es importante usarlo con
+precaución, ya que puede generar problemas si no se realiza correctamente.
 
 <div style="page-break-after: always;"></div>
 
-## Código 
+## Código
 
 ### main.cpp
 
@@ -97,7 +113,6 @@ int main(){
 	return 0;
 }
 ```
-
 
 <div style="page-break-after: always;"></div>
 
@@ -207,7 +222,6 @@ Deportista::Deportista(int NumeroDeSocio, string Nombre, int Edad, string Deport
 
 ![ |  center](attachments/output.jpg)
 
-  
 ![ | center](attachments/dat-1.jpg)
 
 ![ | center](attachments/dat-2.jpg)
@@ -216,4 +230,7 @@ Deportista::Deportista(int NumeroDeSocio, string Nombre, int Edad, string Deport
 
 ## Conclusión
 
-Para finalizar, esta práctica se me hizo interesante ya que no solo guardamos datos de manera permanente, sino que los guardamos en bloques de bytes, lo cual permite gestionar los datos de una manera más sencillas. Entiendo el código y todo, pero no entiendo el porqué trabajar con un archivo binario como ".dat". 
+Para finalizar, esta práctica se me hizo interesante ya que no solo guardamos
+datos de manera permanente, sino que los guardamos en bloques de bytes, lo cual
+permite gestionar los datos de una manera más sencillas. Entiendo el código y
+todo, pero no entiendo el porqué trabajar con un archivo binario como ".dat".

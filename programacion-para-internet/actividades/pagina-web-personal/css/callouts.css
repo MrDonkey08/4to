@@ -1,40 +1,56 @@
 .callouts {
-	color: red;
+    color: red;
 }
 
-.note, .see-also {
-	background-color: green;
+.note,
+.see-also {
+    background-color: green;
 }
-.abstract, .summary, .tldr {
-	background-color: green;
+.abstract,
+.summary,
+.tldr {
+    background-color: green;
 }
-.info, .todo {
-	background-color: green;
+.info,
+.todo {
+    background-color: green;
 }
-.important, .tip, .hint {
-	background-color: green;
+.important,
+.tip,
+.hint {
+    background-color: green;
 }
-.check, .done, .success  {
-	background-color: green;
+.check,
+.done,
+.success {
+    background-color: green;
 }
-.question, .help, .faq {
-	background-color: green;
+.question,
+.help,
+.faq {
+    background-color: green;
 }
-.warning, .caution, .attention {
-	background-color: green;
+.warning,
+.caution,
+.attention {
+    background-color: green;
 }
-.failure, .fail, .missing {
-	background-color: green;
+.failure,
+.fail,
+.missing {
+    background-color: green;
 }
-.danger, .error {
-	background-color: green;
+.danger,
+.error {
+    background-color: green;
 }
 .bug {
-	background-color: green;
+    background-color: green;
 }
 .example {
-	background-color: green;
+    background-color: green;
 }
-.quote, .cite {
-	background-color: green;
+.quote,
+.cite {
+    background-color: green;
 }

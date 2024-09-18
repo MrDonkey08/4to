@@ -1,44 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Formulario</title>
-		<link rel="icon" type="image/x-icon" href="./img/favicon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="./css/normalize.css" />
-		<link rel="stylesheet" href="./css/styles.css" />
-	</head>
-	
-	<body>
-		<header class="header">
-			<h1 class="head-1">Plantilla de formulario</h1>
-			<img src="./img/favicon.png" alt="Recipiente" />
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-		<form action="./php/registrar.php" method="post" class="contenedor">
-			<fieldset>
-				<h2 class="head-2">Datos de entrada</h2>
-				<div class="campos">
-					<div class="campo">
-						<label for="">nombre:</label>
-						<input required class="input-text" placeholder="nombre" class="input-data" name="nombre" id="nombre" />
-					</div>
-					<div class="campo">
-						<label for="">Apellidos:</label>
-						<input required class="input-text" placeholder="apellidos" class="input-data" name="apellido" id="apellido" />
-					</div>
-					<div class="campo">
-						<label for="">Correo electrónico:</label>
-						<input required class="input-text" placeholder="correo" class="input-data" name="correo" id="correo" />
-					</div>
-				</div>
-			</fieldset>
-			<div class="alinear-boton">
-				<input name="btncalcular" class="boton" type="submit" value="Enviar" />
-			</div>
-		</form>
-	</body>
+  <body>
+    <header class="header">
+      <h1 class="head-1">Plantilla de formulario</h1>
+      <img src="./img/favicon.png" alt="Recipiente" />
+    </header>
+
+    <form action="./php/registrar.php" method="post" class="contenedor">
+      <fieldset>
+        <h2 class="head-2">Datos de entrada</h2>
+        <div class="campos">
+          <div class="campo">
+            <label for="">nombre:</label>
+            <input
+              required
+              class="input-text"
+              placeholder="nombre"
+              class="input-data"
+              name="nombre"
+              id="nombre"
+            />
+          </div>
+          <div class="campo">
+            <label for="">Apellidos:</label>
+            <input
+              required
+              class="input-text"
+              placeholder="apellidos"
+              class="input-data"
+              name="apellido"
+              id="apellido"
+            />
+          </div>
+          <div class="campo">
+            <label for="">Correo electrónico:</label>
+            <input
+              required
+              class="input-text"
+              placeholder="correo"
+              class="input-data"
+              name="correo"
+              id="correo"
+            />
+          </div>
+        </div>
+      </fieldset>
+      <div class="alinear-boton">
+        <input name="btncalcular" class="boton" type="submit" value="Enviar" />
+      </div>
+    </form>
+  </body>
 </html>

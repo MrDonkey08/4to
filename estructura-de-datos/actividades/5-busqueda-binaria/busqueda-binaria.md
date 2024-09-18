@@ -2,10 +2,9 @@
 
 ## <center>Centro Universitario de Ciencias Exactas E Ingenierías</center>
 
+![Portada-UDG | left | 200](../../../../attachments/images/portada-udg.jpeg)
+![Portada-CUCEI | right | 200](../../../../attachments/images/portada-cucei.jpeg)
 
-
-![Portada-UDG | left | 200](../../../../attachments/images/portada-udg.jpeg) ![Portada-CUCEI | right | 200](../../../../attachments/images/portada-cucei.jpeg)
- 
 <br> <br> <br> <br> <br><br> <br><br><br><br><br><br><br><br><br><br><br>
 
 ### Tarea 5: Búsqueda Binaria
@@ -24,16 +23,20 @@
 
 <div style="page-break-after: always;"></div>
 
-
-
-
 # Búsqueda Binaria
 
 ## Marco Teórico
 
-1. Explique con sus palabras en qué consiste la búsqueda binaria. (Lectura del punto 10.2.2 páginas 516 a la 519).
+1. Explique con sus palabras en qué consiste la búsqueda binaria. (Lectura del
+   punto 10.2.2 páginas 516 a la 519).
 
-La **búsquda binaria** es un algoritmo que consiste en tener un arreglo ordenado ascendentemente para ir dividiéndolo en mitades e ir comparando cada uno de los extremos "en donde se hizo el corte" (por decirlo de una manera). Esto lo hace hasta encontrar la posición del valor o hasta recorrer todo el arreglo. Si encuentra el arreglo, te devuelve la posición, en caso contrario, te devuelve el valor en negativo en dónde se podría insertar dicho elemento manteniendo el orden.
+La **búsquda binaria** es un algoritmo que consiste en tener un arreglo ordenado
+ascendentemente para ir dividiéndolo en mitades e ir comparando cada uno de los
+extremos "en donde se hizo el corte" (por decirlo de una manera). Esto lo hace
+hasta encontrar la posición del valor o hasta recorrer todo el arreglo. Si
+encuentra el arreglo, te devuelve la posición, en caso contrario, te devuelve el
+valor en negativo en dónde se podría insertar dicho elemento manteniendo el
+orden.
 
 2. Anexar la Figura 10.3 pág. 518 del libro de la maestra Silvia Guardati.
 
@@ -41,7 +44,8 @@ La **búsquda binaria** es un algoritmo que consiste en tener un arreglo ordenad
 
 ### Referencias
 
-- Guardati S. (2007). _ESTRUCTURA DE DATOS ORIENTADA A OBJETOS (1ra ed.)_. Editorial. Pearson
+- Guardati S. (2007). _ESTRUCTURA DE DATOS ORIENTADA A OBJETOS (1ra ed.)_.
+  Editorial. Pearson
 
 <div style="page-break-after: always;"></div>
 
@@ -352,8 +356,6 @@ void Ordenar(Arreglo<T> &Arre) {
 
 <center>Menú</center>
 
-
-
 ![ | center](attachments/1.png)
 
 <center>PASO 1: Llenar el arreglo con 10 datos de tipo entero de forma desordenada</center>
@@ -382,6 +384,14 @@ void Ordenar(Arreglo<T> &Arre) {
 
 ## Conclusión
 
-En retrospectiva, esta actividad me pareció muy interestante de realizar debido a que aprendí el funcionamiento y la utilidad de los algoritmos de búsqueda. En concreto este se me hizo interesante debido a que, para su funcionamiento, es necesario ordenar el arreglo y, por lo tanto, uno debe escoger el **algoritmo de ordenamiento** más ideal según sea el caso, esto con el fin de mejorar el rendimiento del programa. 
+En retrospectiva, esta actividad me pareció muy interestante de realizar debido
+a que aprendí el funcionamiento y la utilidad de los algoritmos de búsqueda. En
+concreto este se me hizo interesante debido a que, para su funcionamiento, es
+necesario ordenar el arreglo y, por lo tanto, uno debe escoger el **algoritmo de
+ordenamiento** más ideal según sea el caso, esto con el fin de mejorar el
+rendimiento del programa.
 
-Para finalizar, me gustaría señalar que este algoritmo, a comparación de la **búsqueda secuencial**, analiza el arreglo de una manera más óptima. El punto malo que encuentro en la **búsqueda binara** respecto a la **secuencial** es que forzosamente requiere que el arreglo se encuentre ordenado. 
+Para finalizar, me gustaría señalar que este algoritmo, a comparación de la
+**búsqueda secuencial**, analiza el arreglo de una manera más óptima. El punto
+malo que encuentro en la **búsqueda binara** respecto a la **secuencial** es que
+forzosamente requiere que el arreglo se encuentre ordenado.

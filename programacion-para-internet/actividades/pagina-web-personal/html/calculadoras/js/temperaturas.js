@@ -1,6 +1,6 @@
-const btnTemp = document.getElementById("btn-temp");
-const resTemp = document.getElementById("res-temp");
-const unidadTemp = document.getElementById("unidad-temp");
+const btnTemp = document.getElementById("btn-temp")
+const resTemp = document.getElementById("res-temp")
+const unidadTemp = document.getElementById("unidad-temp")
 
 /*
 + 'parseFloat(string)' 
@@ -11,68 +11,68 @@ const unidadTemp = document.getElementById("unidad-temp");
 - Descarta los ceros finales redundantes (p.ej: 12.4300000 -> 12.43)
 */
 
-let temp;
-let unidad;
+let temp
+let unidad
 
 function getTemp() {
-	let symbol = " °";
+  let symbol = " °"
 
-	const inputTemp = parseFloat(document.getElementById("input-temp").value);
-	const optTempIn = document.getElementById("opt-temp-in").value;
-	const optTempOut = document.getElementById("opt-temp-out").value;
+  const inputTemp = parseFloat(document.getElementById("input-temp").value)
+  const optTempIn = document.getElementById("opt-temp-in").value
+  const optTempOut = document.getElementById("opt-temp-out").value
 
-	if (optTempIn === optTempOut) {
-		temp = inputTemp;
-	} else {
-		switch (optTempIn) {
-			case "C":
-				if (optTempOut === "F") {
-					temp = (inputTemp * 9) / 5 + 32;
-				} else if (optTempOut === "K") {
-					temp = inputTemp + 273.15; // C->K
-				} else {
-					temp = (inputTemp * 9) / 5 + 491.67;
-				}
-				break;
+  if (optTempIn === optTempOut) {
+    temp = inputTemp
+  } else {
+    switch (optTempIn) {
+      case "C":
+        if (optTempOut === "F") {
+          temp = (inputTemp * 9) / 5 + 32
+        } else if (optTempOut === "K") {
+          temp = inputTemp + 273.15 // C->K
+        } else {
+          temp = (inputTemp * 9) / 5 + 491.67
+        }
+        break
 
-			case "F":
-				if (optTempOut === "C") {
-					temp = ((inputTemp - 32) * 5) / 9;
-				} else if (optTempOut === "K") {
-					temp = (inputTemp * 9) / 5 + 273.5; // F->K
-				} else {
-					temp = inputTemp + 459.67;
-				}
-				break;
+      case "F":
+        if (optTempOut === "C") {
+          temp = ((inputTemp - 32) * 5) / 9
+        } else if (optTempOut === "K") {
+          temp = (inputTemp * 9) / 5 + 273.5 // F->K
+        } else {
+          temp = inputTemp + 459.67
+        }
+        break
 
-			case "K":
-				if (optTempOut === "C") {
-					temp = inputTemp - 273.15;
-				} else if (optTempOut === "F") {
-					temp = ((inputTemp - 273.15) * 9) / 5 + 32; // K->F
-				} else {
-					temp = (inputTemp * 9) / 5;
-				}
-				break;
+      case "K":
+        if (optTempOut === "C") {
+          temp = inputTemp - 273.15
+        } else if (optTempOut === "F") {
+          temp = ((inputTemp - 273.15) * 9) / 5 + 32 // K->F
+        } else {
+          temp = (inputTemp * 9) / 5
+        }
+        break
 
-			case "Ra":
-				if (optTempOut === "C") {
-					temp = (inputTemp - 491.67) * (5 / 9);
-				} else if (optTempOut === "F") {
-					temp = inputTemp - 459.67;
-				} else {
-					temp = (inputTemp * 5) / 9;
-				}
-				break;
-		}
-	}
+      case "Ra":
+        if (optTempOut === "C") {
+          temp = (inputTemp - 491.67) * (5 / 9)
+        } else if (optTempOut === "F") {
+          temp = inputTemp - 459.67
+        } else {
+          temp = (inputTemp * 5) / 9
+        }
+        break
+    }
+  }
 
-	temp = parseFloat(temp.toFixed(5));
+  temp = parseFloat(temp.toFixed(5))
 
-	if (optTempOut == "K") {
-		symbol = " ";
-	}
-	resTemp.innerHTML = temp + symbol + optTempOut;
+  if (optTempOut == "K") {
+    symbol = " "
+  }
+  resTemp.innerHTML = temp + symbol + optTempOut
 }
 
-btnTemp.addEventListener("click", getTemp);
+btnTemp.addEventListener("click", getTemp)

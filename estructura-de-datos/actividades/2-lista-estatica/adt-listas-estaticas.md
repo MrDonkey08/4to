@@ -4,15 +4,35 @@
 
 ### Arreglo
 
-Una estructura de datos hace referencia a una colección de elementos y a la manera en que ésta se almacena en la memoria de la computadora y/o en algún dispositivo de memoria secundaria. Esta forma de almacenamiento determina la manera en que los datos se pueden recuperar. En este capítulo se presenta la estructura de datos tipo arreglo, que se utiliza para guardar información en la memoria principal.
+Una estructura de datos hace referencia a una colección de elementos y a la
+manera en que ésta se almacena en la memoria de la computadora y/o en algún
+dispositivo de memoria secundaria. Esta forma de almacenamiento determina la
+manera en que los datos se pueden recuperar. En este capítulo se presenta la
+estructura de datos tipo arreglo, que se utiliza para guardar información en la
+memoria principal.
 
-Un arreglo es una colección finita, ordenada y homogénea de datos. Es finita porque todo arreglo tiene un tamaño límite, es decir, se define el número máximo de elementos que puede almacenar. Es ordenada porque permite hacer referencia al primer elemento, al segundo y así hasta el enésimo elemento que forme el arreglo. Por último, se dice que es homogénea porque todos los componentes del arreglo son del mismo tipo de datos.
+Un arreglo es una colección finita, ordenada y homogénea de datos. Es finita
+porque todo arreglo tiene un tamaño límite, es decir, se define el número máximo
+de elementos que puede almacenar. Es ordenada porque permite hacer referencia al
+primer elemento, al segundo y así hasta el enésimo elemento que forme el
+arreglo. Por último, se dice que es homogénea porque todos los componentes del
+arreglo son del mismo tipo de datos.
 
-Un arreglo también se puede ver como una colección lineal de elementos, ya que cada uno de ellos sólo tiene un predecesor y un sucesor, con excepción del primero que sólo tiene sucesor y del último, que sólo tiene predecesor. En todo arreglo se distinguen el nombre, los componentes y los índices. El nombre hace referencia a la estructura como un todo. Los componentes son los valores que forman el arreglo, es decir, cada uno de los datos que se almacenan en él. Mientras que los índices se utilizan para recuperar a cada uno de los componentes de manera individual.
+Un arreglo también se puede ver como una colección lineal de elementos, ya que
+cada uno de ellos sólo tiene un predecesor y un sucesor, con excepción del
+primero que sólo tiene sucesor y del último, que sólo tiene predecesor. En todo
+arreglo se distinguen el nombre, los componentes y los índices. El nombre hace
+referencia a la estructura como un todo. Los componentes son los valores que
+forman el arreglo, es decir, cada uno de los datos que se almacenan en él.
+Mientras que los índices se utilizan para recuperar a cada uno de los
+componentes de manera individual.
 
 ### La clase Arreglo
 
-La clase Arreglo tiene como atributos la colección de elementos que forman la estructura de datos y el número actual de elementos, y como métodos el conjunto de operaciones que son aplicables a un arreglo. La figura 4.3 presenta la clase Arreglo. En este caso se define como plantilla para lograr mayor generalidad.
+La clase Arreglo tiene como atributos la colección de elementos que forman la
+estructura de datos y el número actual de elementos, y como métodos el conjunto
+de operaciones que son aplicables a un arreglo. La figura 4.3 presenta la clase
+Arreglo. En este caso se define como plantilla para lograr mayor generalidad.
 
 ```mermaid
 classDiagram
@@ -30,9 +50,20 @@ En la sección privada de la clase se define el arreglo mediante la instrucción
 T Datos[MAX];
 ```
 
-que significa que se tiene una colección de elementos, llamada Datos, que tiene una capacidad máxima de MAX (constante previamente definida) elementos y que todos los elementos son del tipo T. Según lo presentado en el capítulo 3, T se instanciará con el tipo de dato usado al declarar un objeto del tipo Arreglo. Además, se define el atributo Tam que representa el número actual de elementos que tiene el arreglo. Al declarar un objeto de este tipo se establece el máximo número de elementos que puede almacenar, pero el número de valores que finalmente se guardan depende de la aplicación.
+que significa que se tiene una colección de elementos, llamada Datos, que tiene
+una capacidad máxima de MAX (constante previamente definida) elementos y que
+todos los elementos son del tipo T. Según lo presentado en el capítulo 3, T se
+instanciará con el tipo de dato usado al declarar un objeto del tipo Arreglo.
+Además, se define el atributo Tam que representa el número actual de elementos
+que tiene el arreglo. Al declarar un objeto de este tipo se establece el máximo
+número de elementos que puede almacenar, pero el número de valores que
+finalmente se guardan depende de la aplicación.
 
-Los métodos de acceso y modificación a los elementos del arreglo se estudiarán en la siguiente sección, considerando si los elementos del arreglo se encuentran o no ordenados, ya que esto condiciona la manera de llevar a cabo algunas de las operaciones sobre los mismos. Para declarar un objeto se utiliza la siguiente sintaxis:
+Los métodos de acceso y modificación a los elementos del arreglo se estudiarán
+en la siguiente sección, considerando si los elementos del arreglo se encuentran
+o no ordenados, ya que esto condiciona la manera de llevar a cabo algunas de las
+operaciones sobre los mismos. Para declarar un objeto se utiliza la siguiente
+sintaxis:
 
 ```cpp
 Arreglo<tipo> ObjArreglo;
@@ -46,7 +77,8 @@ Arreglo<int> ObjArreglo;
 
 ### Referencias
 
-- Guardati S. (2007). ESTRUCTURA DE DATOS ORIENTADA A OBJETOS (1ra ed.). Editorial Pearson Educación
+- Guardati S. (2007). ESTRUCTURA DE DATOS ORIENTADA A OBJETOS (1ra ed.).
+  Editorial Pearson Educación
 
 <div style="page-break-after: always;"></div>
 

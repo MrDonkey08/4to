@@ -1,58 +1,57 @@
 .shadow-button-set {
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 2.5vmin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5vmin;
 }
 
-.shadow-button-set>li {
-	display: inline-flex;
-	background: black;
+.shadow-button-set > li {
+    display: inline-flex;
+    background: black;
 }
 
-.shadow-button-set>li:is(:hover, :focus-within)>button:not(:active) {
-	--distance: -10px;
+.shadow-button-set > li:is(:hover, :focus-within) > button:not(:active) {
+    --distance: -10px;
 }
 
 .shadow-button-set button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	outline: none;
-	font-size: 5vmin;
-	border: 3px solid black;
-	background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    font-size: 5vmin;
+    border: 3px solid black;
+    background: white;
 
-	--distance: 0;
-	transform: translateX(var(--distance)) translateY(var(--distance));
+    --distance: 0;
+    transform: translateX(var(--distance)) translateY(var(--distance));
 }
 
 @media (prefers-reduced-motion: no-preference) {
-
-	.shadow-button-set button {
-		will-change: transform;
-		transition: transform .2s ease
-	}
+    .shadow-button-set button {
+        will-change: transform;
+        transition: transform 0.2s ease;
+    }
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 #menu-2 {
-	font-family: system-ui, sans-serif;
+    font-family: system-ui, sans-serif;
 
-	display: grid;
-	place-content: center;
+    display: grid;
+    place-content: center;
 }
 
 #menu-2 button {
-	border-radius: 0;
-	color: black;
-	margin-top: 0;
-	height: auto;
-	padding: 0 35px;
-	background-color: #5B0888;
+    border-radius: 0;
+    color: black;
+    margin-top: 0;
+    height: auto;
+    padding: 0 35px;
+    background-color: #5b0888;
 }

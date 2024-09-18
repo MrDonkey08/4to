@@ -1,42 +1,42 @@
 iframe {
-	margin: 5px;
-	border-radius: 10px;
+    margin: 5px;
+    border-radius: 10px;
 }
 
 .campos-fondo {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-contact {
-	border-radius: 50%;
-	width: 75px;
-	height: 75px;
-	padding: 15px;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    padding: 15px;
 }
 
 .campos {
-	row-gap: 15px;
-	column-gap: 10px;
-	align-items: center;
+    row-gap: 15px;
+    column-gap: 10px;
+    align-items: center;
 }
 
 .campos svg {
-	justify-self: center;
+    justify-self: center;
 }
 
 .card {
-	padding: 25px;
-	border-radius: 30px;
-	background-color: #5370af;
+    padding: 25px;
+    border-radius: 30px;
+    background-color: #5370af;
 }
 
 #datos-contacto {
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
 #ubicacion {
-	margin-top: 40px;
+    margin-top: 40px;
 }

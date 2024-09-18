@@ -4,30 +4,42 @@
 
 ### ¿Qué es una estructura o registro?
 
-Un registro es una estructura de datos que permite almacenar un conjunto de elementos no necesariamente del mismo tipo. Esta agrupación se guarda bajo un mismo nombre; esto permite una mejor eficiencia respecto a las estructuras básicas
+Un registro es una estructura de datos que permite almacenar un conjunto de
+elementos no necesariamente del mismo tipo. Esta agrupación se guarda bajo un
+mismo nombre; esto permite una mejor eficiencia respecto a las estructuras
+básicas
 
 ### ¿Qué es un arreglo de estructuras?
 
-Es una forma de agrupar múltiples estructuras del mismo tipo en una sola colección. Cada elemento del arreglo es una instancia individual de la estructura.
+Es una forma de agrupar múltiples estructuras del mismo tipo en una sola
+colección. Cada elemento del arreglo es una instancia individual de la
+estructura.
 
 ### ¿A qué se le conoce como estructuras anidadas?
 
-Una estructura puede contener otras estructuras llamadas estructuras anidadas, las cuales ahorran tiempo en la escritura de programas que utilizan estructuras similares. Se han de definir los miembros comunes solo una vez en su propia estructura.
+Una estructura puede contener otras estructuras llamadas estructuras anidadas,
+las cuales ahorran tiempo en la escritura de programas que utilizan estructuras
+similares. Se han de definir los miembros comunes solo una vez en su propia
+estructura.
 
 ### Referencias
 
-- Tutoriales programación. (s.f.). _27 - Estructura de datos tipo registro (struct)_. https://www.tutorialesprogramacionya.com/cya/detalleconcepto.php?punto=27&codigo=27&inicio=15
+- Tutoriales programación. (s.f.). _27 - Estructura de datos tipo registro
+  (struct)_.
+  https://www.tutorialesprogramacionya.com/cya/detalleconcepto.php?punto=27&codigo=27&inicio=15
 
-- Parazibyte's blog. (s.f.). _Arreglo de structs en C_. https://parzibyte.me/blog/2020/12/30/arreglo-structs-c/
+- Parazibyte's blog. (s.f.). _Arreglo de structs en C_.
+  https://parzibyte.me/blog/2020/12/30/arreglo-structs-c/
 
-- Aguilar, L. & Martínez, I. (2014). _Programación en C, C++, Java y UML_ (2da edición). Mc Graw Hill
+- Aguilar, L. & Martínez, I. (2014). _Programación en C, C++, Java y UML_ (2da
+  edición). Mc Graw Hill
 
 <div style="page-break-after: always;"></div>
 
 ## Actividades Previas
 
-- Transcribe y analiza el programa de la página 290, del libro: Programación en C,
-C++, Java y UML del Autor: Luis Joyanes Aguilar, 2da Edición, Mc Graw Hill.
+- Transcribe y analiza el programa de la página 290, del libro: Programación en
+  C, C++, Java y UML del Autor: Luis Joyanes Aguilar, 2da Edición, Mc Graw Hill.
 
 ```cpp
 #include <stdio.h>
@@ -227,4 +239,3 @@ void cons_individual() {
 ![](attachments/6.png)
 
 ![](attachments/7.png)
-

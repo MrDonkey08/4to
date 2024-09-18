@@ -1,6 +1,5 @@
 <div style="page-break-after: always;"></div>
 
-
 # Práctica 3: Circuitos aritméticos y secuenciales en VHDL
 
 ## Sumador de 4 bits
@@ -12,7 +11,7 @@
 ### Análisis Lógico
 
 |  A  |  B  | Ci  | Co  |  S  |
-|:---:|:---:|:---:|:---:|:---:|
+| :-: | :-: | :-: | :-: | :-: |
 |  0  |  0  |  0  |  0  |  0  |
 |  0  |  0  |  1  |  0  |  1  |
 |  0  |  1  |  0  |  0  |  1  |
@@ -21,8 +20,6 @@
 |  1  |  0  |  1  |  1  |  0  |
 |  1  |  1  |  0  |  1  |  0  |
 |  1  |  1  |  1  |  1  |  1  |
-
-
 
 ![ | center | 400](3-circuitos-aritmeticos-y-secuenciales-en-vhdl/attachments/FA-4bits-logico.png)
 
@@ -69,7 +66,6 @@ end Behavioral;
 
 ![ | center ](3-circuitos-aritmeticos-y-secuenciales-en-vhdl/attachments/FA-cronograma-2.png)
 
-
 <div style="page-break-after: always;"></div>
 
 ## Contador de 3 bits Gray
@@ -80,16 +76,16 @@ end Behavioral;
 
 ### Análisis Lógico
 
- | $Q_2$ | $Q_1$ | $Q_0$ | $\overline{Q_2}$ | $\overline{Q_1}$ | $\overline{Q_0}$ |
- |:-----:|:-----:|:-----:|:----------------:|:----------------:|:----------------:|
- |   0   |   0   |   0   |        0         |        0         |        1         |
- |   0   |   0   |   1   |        0         |        1         |        1         |
- |   0   |   1   |   1   |        0         |        1         |        0         |
- |   0   |   1   |   0   |        1         |        1         |        0         |
- |   1   |   1   |   0   |        1         |        1         |        1         |
- |   1   |   1   |   1   |        1         |        0         |        1         |
- |   1   |   0   |   1   |        1         |        0         |        0         |
- |   1   |   0   |   0   |        0         |        0         |        0         |
+| $Q_2$ | $Q_1$ | $Q_0$ | $\overline{Q_2}$ | $\overline{Q_1}$ | $\overline{Q_0}$ |
+| :---: | :---: | :---: | :--------------: | :--------------: | :--------------: |
+|   0   |   0   |   0   |        0         |        0         |        1         |
+|   0   |   0   |   1   |        0         |        1         |        1         |
+|   0   |   1   |   1   |        0         |        1         |        0         |
+|   0   |   1   |   0   |        1         |        1         |        0         |
+|   1   |   1   |   0   |        1         |        1         |        1         |
+|   1   |   1   |   1   |        1         |        0         |        1         |
+|   1   |   0   |   1   |        1         |        0         |        0         |
+|   1   |   0   |   0   |        0         |        0         |        0         |
 
 ![ | center | 400](3-circuitos-aritmeticos-y-secuenciales-en-vhdl/attachments/contador-3bits-2-gray-logico.png)
 

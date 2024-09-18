@@ -1,24 +1,29 @@
 html {
-	font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 body {
-	padding: 0 3rem;
+    padding: 0 3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	text-align: left;
-	color: #548dd4;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: left;
+    color: #548dd4;
 }
 
 h1 span {
-	color: #86A3B8;
+    color: #86a3b8;
 }
 
 strong {
-	color:goldenrod
+    color: goldenrod;
 }
 
 a {
-	color: #326eb6;
+    color: #326eb6;
 }

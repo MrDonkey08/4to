@@ -2,22 +2,26 @@
 
 ## Marco Teórico
 
-1. Anexar la Figura 10.1 pág. 507 del libro de la maestra Silvia Guardati 
+1. Anexar la Figura 10.1 pág. 507 del libro de la maestra Silvia Guardati
 
 ![ | center](attachments/figura.jpg)
 
 2. ¿Qué es la búsqueda secuencial? pág. 508
 
-La búsqueda secuencial consiste en recorrer el arreglo, elemento por elemento, empezando con el primero, hasta llegar al dato buscado o hasta que se hayan evaluado todos los componentes del arreglo. Esta última condición se modifica si el arreglo está ordenado.
+La búsqueda secuencial consiste en recorrer el arreglo, elemento por elemento,
+empezando con el primero, hasta llegar al dato buscado o hasta que se hayan
+evaluado todos los componentes del arreglo. Esta última condición se modifica si
+el arreglo está ordenado.
 
-**Referencias:** Guardati S. (2007). _ESTRUCTURA DE DATOS ORIENTADA A OBJETOS (1ra ed.)_. Editorial. Pearson
+**Referencias:** Guardati S. (2007). _ESTRUCTURA DE DATOS ORIENTADA A OBJETOS
+(1ra ed.)_. Editorial. Pearson
 
 <div style="page-break-after: always;"></div>
 
 ## Código
 
 ```cpp
-/* 
+/*
 Juárez Rubio Alan Yahir
 Actividad: Búsqueda Secuencial
 Algoritmo de ordenamiento: Bubble Sort
@@ -34,7 +38,7 @@ template <class T> class Busqueda {
 		virtual int Busca(vector<T>, T) = 0;
 		virtual void Ordenar(vector<T> &) = 0;
 };
-	
+
 template <class T> class SecuencialDesord : public Busqueda<T> {
 	public:
 		int Busca(vector<T> Arre, T Dato) {
